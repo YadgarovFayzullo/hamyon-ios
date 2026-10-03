@@ -1,0 +1,66 @@
+{
+  "sourceLanguage": "ru",
+  "strings": {
+    "Добавь расход в ${applicationName}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add expense in ${applicationName}"
+          }
+        }
+      }
+    },
+    "Запиши трату в ${applicationName}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Log spending in ${applicationName}"
+          }
+        }
+      }
+    },
+    "Сколько я потратил в ${applicationName}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How much did I spend in ${applicationName}"
+          }
+        }
+      }
+    },
+    "Траты за сегодня в ${applicationName}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's spending in ${applicationName}"
+          }
+        }
+      }
+    },
+    "Спроси ${applicationName}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask ${applicationName}"
+          }
+        }
+      }
+    },
+    "Вопрос в ${applicationName}": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Question in ${applicationName}"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

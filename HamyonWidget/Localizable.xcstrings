@@ -1,0 +1,5496 @@
+{
+  "sourceLanguage": "ru",
+  "strings": {
+    "%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
+          }
+        }
+      }
+    },
+    "%@ · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %@"
+          }
+        }
+      }
+    },
+    "%@ · %lld%%": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %lld%%"
+          }
+        }
+      }
+    },
+    "%@ млн": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@M"
+          }
+        }
+      }
+    },
+    "%@: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: %@"
+          }
+        }
+      }
+    },
+    "%lld дней": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld days"
+          }
+        }
+      }
+    },
+    "%lld категорий": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld categories"
+          }
+        }
+      }
+    },
+    "%lld перев.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld transfers"
+          }
+        }
+      }
+    },
+    "%lld тыс.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lldK"
+          }
+        }
+      }
+    },
+    "**%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**%@"
+          }
+        }
+      }
+    },
+    "+%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+%@"
+          }
+        }
+      }
+    },
+    "0": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0"
+          }
+        }
+      }
+    },
+    "4 цифры — для входа, если Face ID не сработает": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "4 digits — to get in if Face ID doesn’t work"
+          }
+        }
+      }
+    },
+    "PDF-выписка или файл": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PDF statement or file"
+          }
+        }
+      }
+    },
+    "SMS": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SMS"
+          }
+        }
+      }
+    },
+    "SMS банка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bank SMS"
+          }
+        }
+      }
+    },
+    "iOS не даёт приложениям читать SMS напрямую — это делает автоматизация, и только для выбранного отправителя. Коды подтверждения и отказы ИИ пропускает, повторы не добавляются.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS doesn’t let apps read SMS directly — the automation does it, and only for the sender you choose. The AI skips confirmation codes and declines, and duplicates aren’t added."
+          }
+        }
+      }
+    },
+    "Анализ: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analysis: %@"
+          }
+        }
+      }
+    },
+    "Анализирую расходы…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analyzing spending…"
+          }
+        }
+      }
+    },
+    "Банк": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bank"
+          }
+        }
+      }
+    },
+    "Банк не выбран": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No bank selected"
+          }
+        }
+      }
+    },
+    "В SMS банка обычно нет имени получателя. Нажмите на перевод в списке ниже и впишите в название, кому он, — так анализ станет точнее.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bank SMS usually don’t include the recipient’s name. Tap a transfer below and enter who it was for in its name — the analysis gets more accurate."
+          }
+        }
+      }
+    },
+    "В ИИ уходят только суммы, категории и названия покупок — без номеров карт и SMS.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only amounts, categories and purchase names are sent to the AI — no card numbers or SMS."
+          }
+        }
+      }
+    },
+    "В этом месяце расходов нет.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No spending this month."
+          }
+        }
+      }
+    },
+    "Введите код": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter passcode"
+          }
+        }
+      }
+    },
+    "Ввести код": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter Passcode"
+          }
+        }
+      }
+    },
+    "Включите «Запускать сразу» и нажмите «Далее».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn on “Run Immediately” and tap “Next”."
+          }
+        }
+      }
+    },
+    "Возврат": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refund"
+          }
+        }
+      }
+    },
+    "Все": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All"
+          }
+        }
+      }
+    },
+    "Все карты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All cards"
+          }
+        }
+      }
+    },
+    "Все категории": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All categories"
+          }
+        }
+      }
+    },
+    "Все операции месяца — %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All transactions this month — %lld"
+          }
+        }
+      }
+    },
+    "Всего на картах": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total on cards"
+          }
+        }
+      }
+    },
+    "Вставьте текст SMS из банка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paste the bank SMS text"
+          }
+        }
+      }
+    },
+    "Вход по Face ID": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Face ID Lock"
+          }
+        }
+      }
+    },
+    "Вчера": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yesterday"
+          }
+        }
+      }
+    },
+    "Вы сказали": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You said"
+          }
+        }
+      }
+    },
+    "Выберите «Сообщение». В поле «Отправитель» укажите банк (например, 900 или имя отправителя SMS) — или «Сообщение содержит»: UZS.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose “Message”. Set “Sender” to your bank (for example 900 or the SMS sender name) — or “Message Contains”: UZS."
+          }
+        }
+      }
+    },
+    "Выбрать даты…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose Dates…"
+          }
+        }
+      }
+    },
+    "Выбрать другой файл": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose Another File"
+          }
+        }
+      }
+    },
+    "Говорите": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speak"
+          }
+        }
+      }
+    },
+    "Готово": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
+          }
+        }
+      }
+    },
+    "Готово. Каждая SMS о покупке будет сама появляться в «Расходах».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done. Every purchase SMS will appear in Expenses on its own."
+          }
+        }
+      }
+    },
+    "График": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chart"
+          }
+        }
+      }
+    },
+    "Данные": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data"
+          }
+        }
+      }
+    },
+    "Дата": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date"
+          }
+        }
+      }
+    },
+    "Действие ещё ни разу не вызывалось из «Команд».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The action hasn’t been called from Shortcuts yet."
+          }
+        }
+      }
+    },
+    "Добавить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add"
+          }
+        }
+      }
+    },
+    "Добавить (%lld)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add (%lld)"
+          }
+        }
+      }
+    },
+    "Добавить карту": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Card"
+          }
+        }
+      }
+    },
+    "Добавить расход из SMS": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Expense from SMS"
+          }
+        }
+      }
+    },
+    "Добавлено: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Added: %@"
+          }
+        }
+      }
+    },
+    "Добавьте действие «Добавить расход из SMS» (приложение Hamyon).": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add the action “Add Expense from SMS” (the Hamyon app)."
+          }
+        }
+      }
+    },
+    "Добавьте ключ Gemini в настройках — без ИИ выписку не прочитать.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a Gemini key in Settings — statements can’t be read without the AI."
+          }
+        }
+      }
+    },
+    "Добавьте ключ Gemini в настройках, чтобы получить анализ.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a Gemini key in Settings to get an analysis."
+          }
+        }
+      }
+    },
+    "Доброе утро": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good morning"
+          }
+        }
+      }
+    },
+    "Доброй ночи": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good night"
+          }
+        }
+      }
+    },
+    "Добрый вечер": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good evening"
+          }
+        }
+      }
+    },
+    "Добрый день": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Good afternoon"
+          }
+        }
+      }
+    },
+    "Дом и коммуналка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Home & utilities"
+          }
+        }
+      }
+    },
+    "Доход": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Income"
+          }
+        }
+      }
+    },
+    "Доход и расход": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Income and spending"
+          }
+        }
+      }
+    },
+    "Доходы": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Income"
+          }
+        }
+      }
+    },
+    "Другое": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other"
+          }
+        }
+      }
+    },
+    "Если на скриншоте не видно номера карты, операции запишутся на выбранную.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If the card number isn’t visible, transactions go to the selected card."
+          }
+        }
+      }
+    },
+    "Есть новые операции — обновите": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New transactions — refresh"
+          }
+        }
+      }
+    },
+    "Ещё %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld more"
+          }
+        }
+      }
+    },
+    "Журнал SMS": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "SMS log"
+          }
+        }
+      }
+    },
+    "Забыли код?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forgot passcode?"
+          }
+        }
+      }
+    },
+    "Закончить запись": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop Recording"
+          }
+        }
+      }
+    },
+    "Заметки": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notes"
+          }
+        }
+      }
+    },
+    "Записать заново": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Record Again"
+          }
+        }
+      }
+    },
+    "Защита": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Security"
+          }
+        }
+      }
+    },
+    "Здесь видно каждое сообщение, которое прислали «Команды», и что с ним стало.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Every message Shortcuts sent and what happened to it."
+          }
+        }
+      }
+    },
+    "Здоровье": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Health"
+          }
+        }
+      }
+    },
+    "ИИ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI"
+          }
+        }
+      }
+    },
+    "ИИ нашёл, где сэкономить в следующем месяце": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI found where to save next month"
+          }
+        }
+      }
+    },
+    "ИИ нашёл, как сэкономить ≈ %@ в месяц": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI found how to save ≈ %@ a month"
+          }
+        }
+      }
+    },
+    "ИИ не вернул ответ.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The AI returned no answer."
+          }
+        }
+      }
+    },
+    "ИИ разбирает SMS и фразы и делает анализ расходов. Ключи хранятся в Связке ключей.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The AI parses SMS and phrases and analyzes your spending. Keys are stored in the Keychain."
+          }
+        }
+      }
+    },
+    "ИИ-анализ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI analysis"
+          }
+        }
+      }
+    },
+    "Импорт операций": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import Transactions"
+          }
+        }
+      }
+    },
+    "Импорт: скриншоты и PDF": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import: screenshots & PDF"
+          }
+        }
+      }
+    },
+    "Итоги месяца": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Month Summary"
+          }
+        }
+      }
+    },
+    "Как подключить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How to connect"
+          }
+        }
+      }
+    },
+    "Карт пока нет": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No cards yet"
+          }
+        }
+      }
+    },
+    "Карта": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Card"
+          }
+        }
+      }
+    },
+    "Карты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cards"
+          }
+        }
+      }
+    },
+    "Карты появятся сами, когда придут SMS банка с номером карты.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cards appear automatically when bank SMS with a card number arrive."
+          }
+        }
+      }
+    },
+    "Карты появятся сами, когда придут SMS банка с номером карты. Или добавьте карту вручную.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cards appear automatically from bank SMS. Or add a card manually."
+          }
+        }
+      }
+    },
+    "Категории": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Categories"
+          }
+        }
+      }
+    },
+    "Категория": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Category"
+          }
+        }
+      }
+    },
+    "Кафе и доставка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cafes & delivery"
+          }
+        }
+      }
+    },
+    "Ключ Anthropic API": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anthropic API Key"
+          }
+        }
+      }
+    },
+    "Ключ Gemini": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemini key"
+          }
+        }
+      }
+    },
+    "Ключ Gemini API": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemini API Key"
+          }
+        }
+      }
+    },
+    "Код-пароль при входе": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passcode Lock"
+          }
+        }
+      }
+    },
+    "Коды не совпали. Придумайте заново": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passcodes didn’t match. Try again"
+          }
+        }
+      }
+    },
+    "Комиссии": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fees"
+          }
+        }
+      }
+    },
+    "Между своими картами": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Between your cards"
+          }
+        }
+      }
+    },
+    "Месяц": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Month"
+          }
+        }
+      }
+    },
+    "Модель": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Model"
+          }
+        }
+      }
+    },
+    "Можно сэкономить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You could save"
+          }
+        }
+      }
+    },
+    "Можно сэкономить ≈ %@ / мес": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You could save ≈ %@ / mo"
+          }
+        }
+      }
+    },
+    "Мои итоги в Hamyon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My month in Hamyon"
+          }
+        }
+      }
+    },
+    "Мои карты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My Cards"
+          }
+        }
+      }
+    },
+    "Мой %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My %@"
+          }
+        }
+      }
+    },
+    "Надиктовать": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dictate"
+          }
+        }
+      }
+    },
+    "Нажмите на карту, чтобы выбрать банк, платёжную систему и название. Номер и остаток берутся из SMS банка.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap a card to choose its bank, network and name. The number and balance come from bank SMS."
+          }
+        }
+      }
+    },
+    "Нажмите на поле «Текст» и выберите «Ввод быстрой команды».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the “Text” field and choose “Shortcut Input”."
+          }
+        }
+      }
+    },
+    "Нажмите на цвет — покажу сумму, удерживайте — отфильтрую операции": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap a color to see the amount, hold to filter transactions"
+          }
+        }
+      }
+    },
+    "Название": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Title"
+          }
+        }
+      }
+    },
+    "Название или магазин": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name or store"
+          }
+        }
+      }
+    },
+    "Название или сумма": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name or amount"
+          }
+        }
+      }
+    },
+    "Название карты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Card name"
+          }
+        }
+      }
+    },
+    "Название, например «Зарплатная»": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name, e.g. “Salary”"
+          }
+        }
+      }
+    },
+    "Наличные / не указана": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cash / not set"
+          }
+        }
+      }
+    },
+    "Напоминания": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reminders"
+          }
+        }
+      }
+    },
+    "Например: «обед 45 тысяч, такси 18»": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For example: “lunch 45 thousand, taxi 18”"
+          }
+        }
+      }
+    },
+    "Настройки": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "Не выбран": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "None"
+          }
+        }
+      }
+    },
+    "Не выбрана": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "None"
+          }
+        }
+      }
+    },
+    "Не нашёл сумму. Скажите, например: «кофе 25 тысяч».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No amount found. Say, for example: “coffee 25 thousand”."
+          }
+        }
+      }
+    },
+    "Не получилось": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Something Went Wrong"
+          }
+        }
+      }
+    },
+    "Не расход. Комиссия %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not spending. Fee %@"
+          }
+        }
+      }
+    },
+    "Не сейчас": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not Now"
+          }
+        }
+      }
+    },
+    "Не считается расходом": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not counted as spending"
+          }
+        }
+      }
+    },
+    "Не удалось открыть файл.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn’t open the file."
+          }
+        }
+      }
+    },
+    "Неверный API-ключ %@. Проверьте его в настройках.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invalid %@ API key. Check it in Settings."
+          }
+        }
+      }
+    },
+    "Неверный код": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wrong passcode"
+          }
+        }
+      }
+    },
+    "Нет": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "None"
+          }
+        }
+      }
+    },
+    "Нет операций": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No transactions"
+          }
+        }
+      }
+    },
+    "Ничего не распознано. Попробуйте ещё раз.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing was recognized. Try again."
+          }
+        }
+      }
+    },
+    "Новая карта": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Card"
+          }
+        }
+      }
+    },
+    "Новая операция": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Transaction"
+          }
+        }
+      }
+    },
+    "Новые — %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New — %lld"
+          }
+        }
+      }
+    },
+    "Номер": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Number"
+          }
+        }
+      }
+    },
+    "Номер карты или последние 4 цифры": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Card number or last 4 digits"
+          }
+        }
+      }
+    },
+    "Номера карт берутся из SMS банка. Название помогает быстрее различать карты, а ИИ учитывает его в анализе — например, «Зарплатная» или «На проезд».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Card numbers come from bank SMS. A name helps tell cards apart, and the AI uses it in the analysis — for example, “Salary” or “Transit”."
+          }
+        }
+      }
+    },
+    "Обзор": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Overview"
+          }
+        }
+      }
+    },
+    "Обновить анализ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh analysis"
+          }
+        }
+      }
+    },
+    "Образование": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Education"
+          }
+        }
+      }
+    },
+    "Обычно это занимает 5–20 секунд": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This usually takes 5–20 seconds"
+          }
+        }
+      }
+    },
+    "Операции": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "History"
+          }
+        }
+      }
+    },
+    "Операций": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transactions"
+          }
+        }
+      }
+    },
+    "Операций не найдено.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No transactions found."
+          }
+        }
+      }
+    },
+    "Операция": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transaction"
+          }
+        }
+      }
+    },
+    "Оплата": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Payment"
+          }
+        }
+      }
+    },
+    "Определить по файлу": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detect from file"
+          }
+        }
+      }
+    },
+    "Остаток": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Balance"
+          }
+        }
+      }
+    },
+    "Остаток, сум": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Balance, UZS"
+          }
+        }
+      }
+    },
+    "Откройте «Команды» → вкладка «Автоматизация» → «+».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Shortcuts → Automation tab → “+”."
+          }
+        }
+      }
+    },
+    "Откройте ваши финансы": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock your finances"
+          }
+        }
+      }
+    },
+    "Откройте историю операций в приложении банка, Payme или Click, сделайте скриншоты (можно несколько) или скачайте выписку в PDF. ИИ найдёт операции и остаток, а уже добавленные по SMS пропустит.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the transaction history in your bank app, Payme or Click and take screenshots (several are fine) or download a PDF statement. The AI finds the transactions and balance and skips ones already added from SMS."
+          }
+        }
+      }
+    },
+    "Открыть": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock"
+          }
+        }
+      }
+    },
+    "Открыть «Команды»": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Shortcuts"
+          }
+        }
+      }
+    },
+    "Отменить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "Отправлено": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sent"
+          }
+        }
+      }
+    },
+    "Ошибка %@ (%lld): %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ error (%lld): %@"
+          }
+        }
+      }
+    },
+    "Перевод": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transfer"
+          }
+        }
+      }
+    },
+    "Переводы": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transfers"
+          }
+        }
+      }
+    },
+    "Период": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Period"
+          }
+        }
+      }
+    },
+    "Платёжная система": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Network"
+          }
+        }
+      }
+    },
+    "По": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To"
+          }
+        }
+      }
+    },
+    "По категориям": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "By category"
+          }
+        }
+      }
+    },
+    "По месяцам": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "By month"
+          }
+        }
+      }
+    },
+    "По этой карте не приходят SMS — остаток можно вписать сам или взять со скриншота через «Импорт».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No SMS arrive for this card — enter the balance yourself or take it from a screenshot via Import."
+          }
+        }
+      }
+    },
+    "Повтор": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repeat"
+          }
+        }
+      }
+    },
+    "Повторите код": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repeat the passcode"
+          }
+        }
+      }
+    },
+    "Повторить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try Again"
+          }
+        }
+      }
+    },
+    "Подарки": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gifts"
+          }
+        }
+      }
+    },
+    "Поделиться": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
+          }
+        }
+      }
+    },
+    "Поделиться итогами месяца": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share Month Summary"
+          }
+        }
+      }
+    },
+    "Подключить SMS": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connect SMS"
+          }
+        }
+      }
+    },
+    "Подключить SMS банка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connect bank SMS"
+          }
+        }
+      }
+    },
+    "Подписки": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subscriptions"
+          }
+        }
+      }
+    },
+    "Подробнее": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Details"
+          }
+        }
+      }
+    },
+    "Подтвердите, что это вы": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm it’s you"
+          }
+        }
+      }
+    },
+    "Подтвердите, что это вы, чтобы задать новый код": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm it’s you to set a new passcode"
+          }
+        }
+      }
+    },
+    "Показать": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show"
+          }
+        }
+      }
+    },
+    "Показать остатки": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show Balances"
+          }
+        }
+      }
+    },
+    "Покупка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Purchase"
+          }
+        }
+      }
+    },
+    "Покупки": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shopping"
+          }
+        }
+      }
+    },
+    "Получено": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Received"
+          }
+        }
+      }
+    },
+    "Получить бесплатный ключ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get a free key"
+          }
+        }
+      }
+    },
+    "Последние 4 цифры": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last 4 digits"
+          }
+        }
+      }
+    },
+    "Последние операции": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recent transactions"
+          }
+        }
+      }
+    },
+    "Последняя": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last"
+          }
+        }
+      }
+    },
+    "Поступление": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Incoming"
+          }
+        }
+      }
+    },
+    "Потрачено в этом месяце": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spent this month"
+          }
+        }
+      }
+    },
+    "Появились новые операции — обновите анализ.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "There are new transactions — refresh the analysis."
+          }
+        }
+      }
+    },
+    "Превышен лимит %@ (бесплатный тариф). Подождите минуту и попробуйте снова.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ rate limit reached (free tier). Wait a minute and try again."
+          }
+        }
+      }
+    },
+    "Придумайте код": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create a passcode"
+          }
+        }
+      }
+    },
+    "Приложение закрывается, когда вы из него выходите, и открывается по Face ID или коду телефона. В переключателе приложений суммы скрыты.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The app locks when you leave it and opens with Face ID or your passcode. Amounts are hidden in the app switcher."
+          }
+        }
+      }
+    },
+    "Приложение закрывается, когда вы из него выходите. Открывается по Face ID, а если он не сработал — по коду из 4 цифр. В переключателе приложений суммы скрыты.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The app locks when you leave it. It opens with Face ID, or with a 4-digit passcode if Face ID doesn’t work. Amounts are hidden in the app switcher."
+          }
+        }
+      }
+    },
+    "Пришёл не текст SMS. В поле «Текст» выберите Body.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "That wasn’t the SMS text. Choose Body in the Text field."
+          }
+        }
+      }
+    },
+    "Проанализировать расходы": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analyze spending"
+          }
+        }
+      }
+    },
+    "Проверить или добавить старую SMS": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test or add an old SMS"
+          }
+        }
+      }
+    },
+    "Проверьте": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review"
+          }
+        }
+      }
+    },
+    "Продукты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Groceries"
+          }
+        }
+      }
+    },
+    "Пустой текст.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empty text."
+          }
+        }
+      }
+    },
+    "Путешествия": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Travel"
+          }
+        }
+      }
+    },
+    "Разбирает SMS банка или фразу («обед 45 тысяч») и сохраняет операцию в «Расходы».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parses a bank SMS or a phrase (“lunch 45 thousand”) and saves the transaction to Expenses."
+          }
+        }
+      }
+    },
+    "Разбираю…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thinking…"
+          }
+        }
+      }
+    },
+    "Развлечения": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entertainment"
+          }
+        }
+      }
+    },
+    "Разобрать и добавить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parse and add"
+          }
+        }
+      }
+    },
+    "Разрешите доступ к микрофону в Настройках.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow microphone access in Settings."
+          }
+        }
+      }
+    },
+    "Разрешите распознавание речи в Настройках.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow speech recognition in Settings."
+          }
+        }
+      }
+    },
+    "Распознавание для языка %@ сейчас недоступно.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speech recognition for %@ isn’t available right now."
+          }
+        }
+      }
+    },
+    "Распознавание речи": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speech Recognition"
+          }
+        }
+      }
+    },
+    "Расход": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expense"
+          }
+        }
+      }
+    },
+    "Расход за месяц": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spent this month"
+          }
+        }
+      }
+    },
+    "Расходы": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expenses"
+          }
+        }
+      }
+    },
+    "Расходы голосом и из SMS, анализ ИИ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expenses by voice and SMS, AI analysis"
+          }
+        }
+      }
+    },
+    "С": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From"
+          }
+        }
+      }
+    },
+    "Сбросить период": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear Period"
+          }
+        }
+      }
+    },
+    "Свернуть": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimize"
+          }
+        }
+      }
+    },
+    "Связь и интернет": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Phone & internet"
+          }
+        }
+      }
+    },
+    "Сегодня": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today"
+          }
+        }
+      }
+    },
+    "Сервис": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Service"
+          }
+        }
+      }
+    },
+    "Скажите «обед 45 тысяч, такси 18» или подключите SMS банка — расходы будут добавляться сами.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Say “lunch 45 thousand, taxi 18” or connect your bank SMS — expenses will be added automatically."
+          }
+        }
+      }
+    },
+    "Сказать расход": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Say an expense"
+          }
+        }
+      }
+    },
+    "Сколько и на что потратили?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How much did you spend, and on what?"
+          }
+        }
+      }
+    },
+    "Сколько потрачено сегодня — в Dynamic Island и на экране блокировки. Обновляется с каждой новой SMS.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today’s spending in the Dynamic Island and on the Lock Screen. Updates with every new SMS."
+          }
+        }
+      }
+    },
+    "Скриншоты из «Фото»": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Screenshots from Photos"
+          }
+        }
+      }
+    },
+    "Скрыть остатки": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide Balances"
+          }
+        }
+      }
+    },
+    "Скрыть суммы — только проценты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide amounts — percentages only"
+          }
+        }
+      }
+    },
+    "Слишком много попыток. Подождите %lld с": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Too many attempts. Wait %lld s"
+          }
+        }
+      }
+    },
+    "Сменить код": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Change Passcode"
+          }
+        }
+      }
+    },
+    "Снятие наличных": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cash withdrawal"
+          }
+        }
+      }
+    },
+    "Советы": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tips"
+          }
+        }
+      }
+    },
+    "Стереть": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        }
+      }
+    },
+    "Сумма": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amount"
+          }
+        }
+      }
+    },
+    "Текст": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text"
+          }
+        }
+      }
+    },
+    "Тип": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Type"
+          }
+        }
+      }
+    },
+    "Транспорт": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transport"
+          }
+        }
+      }
+    },
+    "Удалить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        }
+      }
+    },
+    "Удалить карту": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete Card"
+          }
+        }
+      }
+    },
+    "Удалить операцию": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete Transaction"
+          }
+        }
+      }
+    },
+    "Удерживайте ещё раз, чтобы снять фильтр": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hold again to clear the filter"
+          }
+        }
+      }
+    },
+    "Уже есть — %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Already added — %lld"
+          }
+        }
+      }
+    },
+    "Узнайте, куда уходят деньги и что можно сократить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See where your money goes and what to cut"
+          }
+        }
+      }
+    },
+    "Читаю выписку…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading the statement…"
+          }
+        }
+      }
+    },
+    "Читаю файл %lld из %lld…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading file %lld of %lld…"
+          }
+        }
+      }
+    },
+    "Экономия ≈ %@ / мес": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saves ≈ %@ / mo"
+          }
+        }
+      }
+    },
+    "Эта SMS уже добавлена.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This SMS has already been added."
+          }
+        }
+      }
+    },
+    "Эта SMS уже обработана.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This SMS has already been processed."
+          }
+        }
+      }
+    },
+    "Эти операции уже пришли по SMS или были импортированы раньше — они не отмечены.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "These already came from SMS or an earlier import — they’re unchecked."
+          }
+        }
+      }
+    },
+    "Это не покупка — пропущено.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not a purchase — skipped."
+          }
+        }
+      }
+    },
+    "Язык речи": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speech Language"
+          }
+        }
+      }
+    },
+    "и ещё %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "plus %@"
+          }
+        }
+      }
+    },
+    "куда ушли деньги": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "where the money went"
+          }
+        }
+      }
+    },
+    "на картах": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "on cards"
+          }
+        }
+      }
+    },
+    "обновлено %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "updated %@"
+          }
+        }
+      }
+    },
+    "потрачено": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "spent"
+          }
+        }
+      }
+    },
+    "сервис не ответил": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "the service didn’t respond"
+          }
+        }
+      }
+    },
+    "сум": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "UZS"
+          }
+        }
+      }
+    },
+    "•%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "•%@"
+          }
+        }
+      }
+    },
+    "•••• %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "•••• %@"
+          }
+        }
+      }
+    },
+    "•••••• %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "•••••• %@"
+          }
+        }
+      }
+    },
+    "−%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "−%@"
+          }
+        }
+      }
+    },
+    "≈ %@ / мес": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "≈ %@ / mo"
+          }
+        }
+      }
+    },
+    "⚠️ пришло «%@» — это отправитель, а не текст SMS. В команде выберите Body.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⚠️ got “%@” — that’s the sender, not the SMS text. Choose Body in the shortcut."
+          }
+        }
+      }
+    },
+    "%@ в месяц": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ a month"
+          }
+        }
+      }
+    },
+    "%@ из %@.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ of %@."
+          }
+        }
+      }
+    },
+    "%@: бюджет исчерпан": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: budget used up"
+          }
+        }
+      }
+    },
+    "%@: осталось %@ из %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: %@ left of %@"
+          }
+        }
+      }
+    },
+    "%@: перерасход %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: over by %@"
+          }
+        }
+      }
+    },
+    "%@: потрачено %lld%%": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@: %lld%% spent"
+          }
+        }
+      }
+    },
+    "%lld без имени — ответ в одно касание": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld without a name — one tap to answer"
+          }
+        }
+      }
+    },
+    "%lld%% к прошлой неделе": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld%% vs last week"
+          }
+        }
+      }
+    },
+    "3 месяца": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 months"
+          }
+        }
+      }
+    },
+    "Hamyon · сегодня": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hamyon · today"
+          }
+        }
+      }
+    },
+    "«Дал Азизу 500 тысяч до пятницы»": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“Lent Aziz 500k until Friday”"
+          }
+        }
+      }
+    },
+    "Баланс и траты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Balance & spending"
+          }
+        }
+      }
+    },
+    "Без имени": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No name"
+          }
+        }
+      }
+    },
+    "Без имени: %lld — указать, кому": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No name: %lld — add who"
+          }
+        }
+      }
+    },
+    "Без чаевых": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No tip"
+          }
+        }
+      }
+    },
+    "Больше всего — %@: %@.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Most on %@: %@."
+          }
+        }
+      }
+    },
+    "Бюджет месяца": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monthly budget"
+          }
+        }
+      }
+    },
+    "Бюджеты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Budgets"
+          }
+        }
+      }
+    },
+    "В SMS банка обычно нет имени получателя. Нажмите на перевод и впишите в название, кому он, — так анализ станет точнее.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bank SMS usually don't name the recipient. Tap a transfer and enter who it was for — the analysis gets more accurate."
+          }
+        }
+      }
+    },
+    "В долг — мне должны вернуть": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A loan — they owe me"
+          }
+        }
+      }
+    },
+    "В долг — мне нужно вернуть": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A loan — I owe it back"
+          }
+        }
+      }
+    },
+    "В этот день в 10:00 придёт напоминание.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You'll get a reminder at 10:00 that day."
+          }
+        }
+      }
+    },
+    "Вернули": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repaid"
+          }
+        }
+      }
+    },
+    "Вернули полностью": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fully repaid"
+          }
+        }
+      }
+    },
+    "Вернули часть, сум": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partly repaid, UZS"
+          }
+        }
+      }
+    },
+    "Вернуть до": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repay by"
+          }
+        }
+      }
+    },
+    "Вести кошелёк": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Track wallet"
+          }
+        }
+      }
+    },
+    "Вести наличные": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Track cash"
+          }
+        }
+      }
+    },
+    "Весь месяц": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Whole month"
+          }
+        }
+      }
+    },
+    "Вопрос": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Question"
+          }
+        }
+      }
+    },
+    "Все переводы разобраны": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All transfers sorted"
+          }
+        }
+      }
+    },
+    "Всё время": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All time"
+          }
+        }
+      }
+    },
+    "Вы": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You"
+          }
+        }
+      }
+    },
+    "Где: «Ужин в Plov Center»": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Where: “Dinner at Plov Center”"
+          }
+        }
+      }
+    },
+    "Да, регулярный": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yes, recurring"
+          }
+        }
+      }
+    },
+    "Делим счёт": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Splitting the bill"
+          }
+        }
+      }
+    },
+    "День месяца": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Day of month"
+          }
+        }
+      }
+    },
+    "До конца месяца можно ≈ %@ в день": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can spend ≈ %@ a day until month end"
+          }
+        }
+      }
+    },
+    "До лимита осталось %@.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ left until the limit."
+          }
+        }
+      }
+    },
+    "Добавить друга": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a friend"
+          }
+        }
+      }
+    },
+    "Долг": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debt"
+          }
+        }
+      }
+    },
+    "Долг в Hamyon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debt in Hamyon"
+          }
+        }
+      }
+    },
+    "Долги": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debts"
+          }
+        }
+      }
+    },
+    "Долгов нет": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No debts"
+          }
+        }
+      }
+    },
+    "Завтра": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tomorrow"
+          }
+        }
+      }
+    },
+    "Завтра платёж: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Payment tomorrow: %@"
+          }
+        }
+      }
+    },
+    "Задать": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set"
+          }
+        }
+      }
+    },
+    "Закрыт %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed %@"
+          }
+        }
+      }
+    },
+    "Закрытые — %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closed — %lld"
+          }
+        }
+      }
+    },
+    "Заметка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Note"
+          }
+        }
+      }
+    },
+    "Записать": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        }
+      }
+    },
+    "ИИ о неделе": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI on your week"
+          }
+        }
+      }
+    },
+    "ИИ посмотрит ваши операции за год, долги, бюджеты и регулярные платежи.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI looks at a year of transactions, debts, budgets and recurring payments."
+          }
+        }
+      }
+    },
+    "Имена берутся из ваших ответов «Кому?». Нажмите на человека — покажу все переводы.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Names come from your “Who?” answers. Tap a person to see all transfers."
+          }
+        }
+      }
+    },
+    "Имя": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name"
+          }
+        }
+      }
+    },
+    "Имя, например «Азиз»": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name, e.g. “Aziz”"
+          }
+        }
+      }
+    },
+    "Итог": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Result"
+          }
+        }
+      }
+    },
+    "Итоги недели": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Week summary"
+          }
+        }
+      }
+    },
+    "Итоги недели: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your week: %@"
+          }
+        }
+      }
+    },
+    "Итого: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total: %@"
+          }
+        }
+      }
+    },
+    "Как делить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How to split"
+          }
+        }
+      }
+    },
+    "Календарь": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calendar"
+          }
+        }
+      }
+    },
+    "Карты появятся после первой SMS банка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cards appear after the first bank SMS"
+          }
+        }
+      }
+    },
+    "Когда": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When"
+          }
+        }
+      }
+    },
+    "Кому были переводы?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Who were the transfers to?"
+          }
+        }
+      }
+    },
+    "Кому отправили?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Who did you send it to?"
+          }
+        }
+      }
+    },
+    "Кому перевели? Удерживайте уведомление и ответьте.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Who was it to? Long-press the notification to answer."
+          }
+        }
+      }
+    },
+    "Кому уходит больше всего переводов?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Who do I send the most money to?"
+          }
+        }
+      }
+    },
+    "Кто кому": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Direction"
+          }
+        }
+      }
+    },
+    "Кто платил": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Who paid"
+          }
+        }
+      }
+    },
+    "Кто что заказал": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "By order"
+          }
+        }
+      }
+    },
+    "Лимит на месяц": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monthly limit"
+          }
+        }
+      }
+    },
+    "Лимит превышен на %@.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Limit exceeded by %@."
+          }
+        }
+      }
+    },
+    "Люди": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "People"
+          }
+        }
+      }
+    },
+    "Месяц −%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Month −%@"
+          }
+        }
+      }
+    },
+    "Мне должны": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Owed to me"
+          }
+        }
+      }
+    },
+    "Можно надиктовать с клавиатуры — кнопка микрофона внизу.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can dictate with the keyboard mic button."
+          }
+        }
+      }
+    },
+    "Мои платежи": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My payments"
+          }
+        }
+      }
+    },
+    "На %lld%% больше прошлой недели.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld%% more than last week."
+          }
+        }
+      }
+    },
+    "На %lld%% меньше прошлой недели.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld%% less than last week."
+          }
+        }
+      }
+    },
+    "На картах": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On cards"
+          }
+        }
+      }
+    },
+    "Нажмите «+», чтобы записать, кому дали или у кого взяли.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap “+” to record a loan you gave or took."
+          }
+        }
+      }
+    },
+    "Нажмите «Сохранить» — долги с вашим участием появятся в «Долгах», а когда друг переведёт деньги, отметьте это на экране «Кому были переводы?».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap Save — debts involving you appear in Debts. When a friend pays you back, mark it on the “Who were the transfers to?” screen."
+          }
+        }
+      }
+    },
+    "Нажмите и скажите, на что потратили.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap and say what you spent on."
+          }
+        }
+      }
+    },
+    "Название: интернет, аренда, кредит": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Name: internet, rent, loan"
+          }
+        }
+      }
+    },
+    "Наличные": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cash"
+          }
+        }
+      }
+    },
+    "Напоминание придёт в 10:00 за день до платежа.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reminder at 10:00 the day before."
+          }
+        }
+      }
+    },
+    "Напомнить накануне": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remind the day before"
+          }
+        }
+      }
+    },
+    "Например, %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E.g. %@"
+          }
+        }
+      }
+    },
+    "Нашёл по операциям: та же сумма примерно в один день каждого месяца. Подтвердите — и накануне придёт напоминание.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Found in your transactions: the same amount around the same day each month. Confirm to get a reminder the day before."
+          }
+        }
+      }
+    },
+    "Не регулярный": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not recurring"
+          }
+        }
+      }
+    },
+    "Не указана": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not set"
+          }
+        }
+      }
+    },
+    "Новые переводы без имени появятся здесь.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New transfers without a name will appear here."
+          }
+        }
+      }
+    },
+    "Новый долг": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New debt"
+          }
+        }
+      }
+    },
+    "Новый платёж": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New payment"
+          }
+        }
+      }
+    },
+    "О каждой операции из SMS": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Every transaction from SMS"
+          }
+        }
+      }
+    },
+    "Общее на всех": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shared by all"
+          }
+        }
+      }
+    },
+    "Общий счёт": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shared bill"
+          }
+        }
+      }
+    },
+    "Одной фразой": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In one phrase"
+          }
+        }
+      }
+    },
+    "Оплачено %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paid %@"
+          }
+        }
+      }
+    },
+    "Осталось %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ left"
+          }
+        }
+      }
+    },
+    "Осталось: %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Left: %lld"
+          }
+        }
+      }
+    },
+    "Остаток на картах и сколько потрачено сегодня и за месяц.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Card balances and what you spent today and this month."
+          }
+        }
+      }
+    },
+    "Остаток на •%@: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Balance on •%@: %@"
+          }
+        }
+      }
+    },
+    "От кого пришло?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Who sent it?"
+          }
+        }
+      }
+    },
+    "От кого пришло? Удерживайте уведомление и ответьте.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Who sent it? Long-press the notification to answer."
+          }
+        }
+      }
+    },
+    "Ответить, кому": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Answer who"
+          }
+        }
+      }
+    },
+    "Отвечает на вопрос о ваших деньгах по операциям, долгам и бюджетам.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Answers questions about your money using transactions, debts and budgets."
+          }
+        }
+      }
+    },
+    "Откройте разбор от ИИ.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the AI review."
+          }
+        }
+      }
+    },
+    "Открыть снова": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reopen"
+          }
+        }
+      }
+    },
+    "Отметьте перевод как долг на экране «Кому были переводы?» или добавьте вручную. В день возврата придёт напоминание.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mark a transfer as a loan on the “Who were the transfers to?” screen or add one manually. You'll get a reminder on the due day."
+          }
+        }
+      }
+    },
+    "Отмечено: %lld. Теперь анализ знает, кому уходят деньги.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marked: %lld. Now the analysis knows where your money goes."
+          }
+        }
+      }
+    },
+    "Отправить друзьям": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Send to friends"
+          }
+        }
+      }
+    },
+    "Переводов за этот период нет.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No transfers in this period."
+          }
+        }
+      }
+    },
+    "Перерасход %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Over by %@"
+          }
+        }
+      }
+    },
+    "Пересчитать: сколько сейчас в кошельке": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recount: how much is in the wallet"
+          }
+        }
+      }
+    },
+    "Платежи": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Payments"
+          }
+        }
+      }
+    },
+    "Платёж": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Payment"
+          }
+        }
+      }
+    },
+    "Пока пусто. Добавьте платёж — интернет, аренду, кредит — и получайте напоминание накануне.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing yet. Add a payment — internet, rent, a loan — and get a reminder the day before."
+          }
+        }
+      }
+    },
+    "Поровну": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Equally"
+          }
+        }
+      }
+    },
+    "Последняя: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last: %@"
+          }
+        }
+      }
+    },
+    "Посчитано в Hamyon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calculated in Hamyon"
+          }
+        }
+      }
+    },
+    "Похоже на регулярные": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Looks recurring"
+          }
+        }
+      }
+    },
+    "Похоже, это %@. Нажмите, чтобы проверить.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Looks like %@. Tap to check."
+          }
+        }
+      }
+    },
+    "При 80% и 100% лимита придёт уведомление. Переводы между своими картами не считаются.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You'll be notified at 80% and 100% of a limit. Transfers between your own cards don't count."
+          }
+        }
+      }
+    },
+    "Пропустить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skip"
+          }
+        }
+      }
+    },
+    "Разделить счёт": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Split the bill"
+          }
+        }
+      }
+    },
+    "Разделить счёт с друзьями": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Split a bill with friends"
+          }
+        }
+      }
+    },
+    "Разобрать": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parse"
+          }
+        }
+      }
+    },
+    "Регулярные платежи": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recurring payments"
+          }
+        }
+      }
+    },
+    "Себе на другую карту": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To my other card"
+          }
+        }
+      }
+    },
+    "Сегодня вернуть %@ %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today: repay %@ %@"
+          }
+        }
+      }
+    },
+    "Сегодня платёж: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Payment today: %@"
+          }
+        }
+      }
+    },
+    "Сегодня срок: %@ возвращает %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Due today: %@ repays %@"
+          }
+        }
+      }
+    },
+    "Сегодня — %@, за месяц — %@.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today — %@, this month — %@."
+          }
+        }
+      }
+    },
+    "Сегодня −%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today −%@"
+          }
+        }
+      }
+    },
+    "Сколько потрачено сегодня и за месяц.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How much you spent today and this month."
+          }
+        }
+      }
+    },
+    "Сколько сейчас наличных?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How much cash do you have?"
+          }
+        }
+      }
+    },
+    "Сколько ушло на такси в этом месяце?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How much went on taxis this month?"
+          }
+        }
+      }
+    },
+    "Смотрю, на что ушла неделя…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Looking at where the week went…"
+          }
+        }
+      }
+    },
+    "Снятие в банкомате пополняет кошелёк и больше не считается тратой. Тратой станут покупки за наличные — скажите «обед 45 тысяч наличными».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ATM withdrawals top up the wallet and no longer count as spending. Cash purchases do — say “lunch 45k in cash”."
+          }
+        }
+      }
+    },
+    "Сохранить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        }
+      }
+    },
+    "Спросите о своих деньгах": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask about your money"
+          }
+        }
+      }
+    },
+    "Спросить Hamyon": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask Hamyon"
+          }
+        }
+      }
+    },
+    "Спросить ИИ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask AI"
+          }
+        }
+      }
+    },
+    "Сравни этот месяц с прошлым": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compare this month with last month"
+          }
+        }
+      }
+    },
+    "Срок возврата": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Due date"
+          }
+        }
+      }
+    },
+    "Сумма счёта": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bill total"
+          }
+        }
+      }
+    },
+    "Сумма счёта (необязательно)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bill total (optional)"
+          }
+        }
+      }
+    },
+    "Сумма, остаток бюджета, а для перевода без имени — вопрос «Кому?», на который можно ответить прямо в уведомлении. Предупреждения бюджета, напоминания о долгах и платежах и итог недели приходят всегда.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amount, budget left and, for a transfer without a name, a “Who?” question you can answer right in the notification. Budget alerts, debt and payment reminders and the weekly summary always arrive."
+          }
+        }
+      }
+    },
+    "Сумма, сум": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amount, UZS"
+          }
+        }
+      }
+    },
+    "Считаю…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calculating…"
+          }
+        }
+      }
+    },
+    "Темнее — больше потрачено. Нажмите на день, чтобы увидеть операции.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Darker means more spent. Tap a day to see its transactions."
+          }
+        }
+      }
+    },
+    "Траты за сегодня": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's spending"
+          }
+        }
+      }
+    },
+    "Убрать": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove"
+          }
+        }
+      }
+    },
+    "Убрать лимит": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove limit"
+          }
+        }
+      }
+    },
+    "Уведомления": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifications"
+          }
+        }
+      }
+    },
+    "Уже вернули %@ из %@.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Already repaid %@ of %@."
+          }
+        }
+      }
+    },
+    "Указать, сколько сейчас в кошельке": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set how much is in the wallet"
+          }
+        }
+      }
+    },
+    "Участники — %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "People — %lld"
+          }
+        }
+      }
+    },
+    "Хватит ли денег до конца месяца?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Will my money last until month end?"
+          }
+        }
+      }
+    },
+    "Чаевые": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tip"
+          }
+        }
+      }
+    },
+    "Через %lld дн. · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In %lld days · %@"
+          }
+        }
+      }
+    },
+    "Что хотите узнать?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What do you want to know?"
+          }
+        }
+      }
+    },
+    "Чтобы уложиться, тратьте не больше ≈ %@ в день.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To stay within it, spend no more than ≈ %@ a day."
+          }
+        }
+      }
+    },
+    "Это возврат долга (%@)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It's a loan repayment (%@)"
+          }
+        }
+      }
+    },
+    "Это возврат моего долга (%@)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I'm repaying my debt (%@)"
+          }
+        }
+      }
+    },
+    "Это с моей карты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From my own card"
+          }
+        }
+      }
+    },
+    "Я": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Me"
+          }
+        }
+      }
+    },
+    "Я в долгу": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I owe"
+          }
+        }
+      }
+    },
+    "в кошельке": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "in the wallet"
+          }
+        }
+      }
+    },
+    "в месяц на регулярные платежи": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "a month on recurring payments"
+          }
+        }
+      }
+    },
+    "в т.ч. %@ по курсу ЦБ": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "incl. %@ at the Central Bank rate"
+          }
+        }
+      }
+    },
+    "вам": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "you"
+          }
+        }
+      }
+    },
+    "вернуть до %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "due %@"
+          }
+        }
+      }
+    },
+    "вести кошелёк": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "track wallet"
+          }
+        }
+      }
+    },
+    "за 7 дней": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "in 7 days"
+          }
+        }
+      }
+    },
+    "задать лимиты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "set limits"
+          }
+        }
+      }
+    },
+    "и общий счёт": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "and split bills"
+          }
+        }
+      }
+    },
+    "из %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "of %@"
+          }
+        }
+      }
+    },
+    "кому переводите": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "who you send to"
+          }
+        }
+      }
+    },
+    "найдено %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld found"
+          }
+        }
+      }
+    },
+    "о своих деньгах": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "about your money"
+          }
+        }
+      }
+    },
+    "платил": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "paid"
+          }
+        }
+      }
+    },
+    "просрочен с %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "overdue since %@"
+          }
+        }
+      }
+    },
+    "регулярные": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "recurring"
+          }
+        }
+      }
+    },
+    "с чаевыми %lld%%": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "with %lld%% tip"
+          }
+        }
+      }
+    },
+    "салат, хлеб": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "salad, bread"
+          }
+        }
+      }
+    },
+    "≈ %@ · около %lld-го": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "≈ %@ · around day %lld"
+          }
+        }
+      }
+    },
+    "≈ %@ в день": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "≈ %@ a day"
+          }
+        }
+      }
+    },
+    "≈ %@. Проверьте, хватает ли на карте.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "≈ %@. Check there's enough on the card."
+          }
+        }
+      }
+    },
+    "Открывает Hamyon на записи голоса.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opens Hamyon ready to record."
+          }
+        }
+      }
+    },
+    "У каждого впишите цены его позиций через «+»: «35 000 + 12 000». Общее делится поровну. Если по счёту выходит больше (обслуживание, чаевые), разница делится пропорционально заказу.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For each person enter their item prices with “+”: “35 000 + 12 000”. Shared items are split equally. If the bill is higher (service, tip), the difference is split in proportion to each order."
+          }
+        }
+      }
+    },
+    "Обновлено %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Updated %@"
+          }
+        }
+      }
+    },
+    "Нажмите — разбор за пару секунд": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap — takes a few seconds"
+          }
+        }
+      }
+    },
+    "Обновляю…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refreshing…"
+          }
+        }
+      }
+    },
+    "Отпустите": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Release"
+          }
+        }
+      }
+    },
+    "Потяните, чтобы обновить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pull to refresh"
+          }
+        }
+      }
+    },
+    "остаток неизвестен": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "balance unknown"
+          }
+        }
+      }
+    },
+    "на %lld картах": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "on %lld cards"
+          }
+        }
+      }
+    },
+    "Красота и уход": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beauty & care"
+          }
+        }
+      }
+    },
+    "В статистике это пока «Переводы». Если перевод — оплата услуги, выберите категорию выше (например, «Красота и уход»), и сумма попадёт туда.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In stats this still counts as Transfers. If the transfer paid for a service, pick a category above (e.g. Beauty & care) and the amount will go there."
+          }
+        }
+      }
+    },
+    "Удалить операцию из SMS?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete this SMS transaction?"
+          }
+        }
+      }
+    },
+    "Удалить операцию?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete transaction?"
+          }
+        }
+      }
+    },
+    "Она пропадёт из статистики. Если SMS придёт снова, операция не восстановится.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It will disappear from your stats. It won't come back even if the SMS arrives again."
+          }
+        }
+      }
+    },
+    "Через": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Via"
+          }
+        }
+      }
+    },
+    "Из выписки банка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From bank statement"
+          }
+        }
+      }
+    },
+    "Из SMS банка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From bank SMS"
+          }
+        }
+      }
+    },
+    "Сумму, дату, карту и поставщика из SMS изменить нельзя — это данные банка. Можно поменять категорию, указать, кому перевод, и добавить заметку.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Amount, date, card and merchant come from the bank and can't be changed. You can change the category, add who the transfer was for and add a note."
+          }
+        }
+      }
+    },
+    "Кому": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To"
+          }
+        }
+      }
+    },
+    "От кого": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From"
+          }
+        }
+      }
+    },
+    "Счета": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accounts"
+          }
+        }
+      }
+    },
+    "на всех картах": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "on all cards"
+          }
+        }
+      }
+    },
+    "на выбранных картах": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "on selected cards"
+          }
+        }
+      }
+    },
+    "Выбрать все": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select all"
+          }
+        }
+      }
+    },
+    "Отмеченные карты учитываются в сумме месяца, графиках, календаре и последних операциях на «Обзоре».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checked cards are counted in the monthly total, charts, calendar and recent transactions on Overview."
+          }
+        }
+      }
+    },
+    "Карт: %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld cards"
+          }
+        }
+      }
+    },
+    "Теперь дважды нажмите на последний день": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Now double-tap the last day"
+          }
+        }
+      }
+    },
+    "Дней: %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld days"
+          }
+        }
+      }
+    },
+    "Дважды нажмите на первый день, затем на последний": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Double-tap the first day, then the last one"
+          }
+        }
+      }
+    },
+    "Старый формат Excel (.xls) не читается. Сохраните выписку как .xlsx или PDF.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Old Excel format (.xls) can't be read. Save the statement as .xlsx or PDF."
+          }
+        }
+      }
+    },
+    "Не удалось прочитать таблицу.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't read the table."
+          }
+        }
+      }
+    },
+    "Выписка Excel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Excel statement"
+          }
+        }
+      }
+    },
+    "Читаю часть %lld из %lld…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading part %lld of %lld…"
+          }
+        }
+      }
+    },
+    "Найдено операций: %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transactions found: %lld"
+          }
+        }
+      }
+    },
+    "Обычно это занимает 5–20 секунд на часть": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usually 5–20 seconds per part"
+          }
+        }
+      }
+    },
+    "Выписка прочитана — проверить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Statement read — review"
+          }
+        }
+      }
+    },
+    "Читаю выписку · %lld из %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading statement · %lld of %lld"
+          }
+        }
+      }
+    },
+    "Готовлю файл…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preparing file…"
+          }
+        }
+      }
+    },
+    "Выписка прочитана": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Statement read"
+          }
+        }
+      }
+    },
+    "Новых операций: %lld. Проверьте и добавьте.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New transactions: %lld. Review and add them."
+          }
+        }
+      }
+    },
+    "Новых операций нет — всё уже было в Hamyon.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No new transactions — everything is already in Hamyon."
+          }
+        }
+      }
+    },
+    "Hamyon читает выписку": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hamyon is reading a statement"
+          }
+        }
+      }
+    },
+    "Часть %lld из %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Part %lld of %lld"
+          }
+        }
+      }
+    },
+    "Можно свернуть — дочитаю в фоне и пришлю уведомление.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can minimize — I'll finish in the background and notify you."
+          }
+        }
+      }
+    },
+    "Остановить": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop"
+          }
+        }
+      }
+    },
+    "Запись экрана": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Screen recording"
+          }
+        }
+      }
+    },
+    "Не удалось прочитать видео.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't read the video."
+          }
+        }
+      }
+    },
+    "Откройте историю операций в приложении банка, Payme или Click, сделайте скриншоты (можно несколько) или скачайте выписку в PDF или Excel. ИИ найдёт операции и остаток, а уже добавленные по SMS пропустит.\n\nЕсли выписку не скачать (как в SQB Mobile): включите запись экрана в Пункте управления, откройте историю и медленно пролистайте её вниз, затем выберите это видео здесь.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the transaction history in your bank app, Payme or Click and take screenshots (several are fine), or download a PDF or Excel statement. AI finds the transactions and balance and skips ones already added from SMS.\n\nIf the statement can't be downloaded (like in SQB Mobile): start a screen recording from Control Center, open the history and slowly scroll down, then pick that video here."
+          }
+        }
+      }
+    },
+    "Кредиты и рассрочка": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loans & installments"
+          }
+        }
+      }
+    },
+    "Не моя карта": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not my card"
+          }
+        }
+      }
+    },
+    "Другая моя карта…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Another card of mine…"
+          }
+        }
+      }
+    },
+    "Со своей карты": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From my card"
+          }
+        }
+      }
+    },
+    "На свою карту": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To my card"
+          }
+        }
+      }
+    },
+    "Последние 4 цифры карты (необязательно)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last 4 digits (optional)"
+          }
+        }
+      }
+    },
+    "Между своими картами — найдена пара": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Between my cards — matched pair"
+          }
+        }
+      }
+    },
+    "↻ себе": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "↻ own"
+          }
+        }
+      }
+    },
+    "Это перевод себе": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transfer to myself"
+          }
+        }
+      }
+    },
+    "Это не перевод себе": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not a transfer to myself"
+          }
+        }
+      }
+    },
+    "Повторов между файлами убрано: %lld.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duplicates across files removed: %lld."
+          }
+        }
+      }
+    },
+    "Удерживайте перевод, чтобы отметить «Это перевод себе», — такие же переводы на ту же карту отметятся сами.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Long-press a transfer to mark it as a transfer to yourself — transfers to the same card will be marked too."
+          }
+        }
+      }
+    },
+    "Изменения не сохранены": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unsaved changes"
+          }
+        }
+      }
+    },
+    "Выйти без сохранения": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Discard changes"
+          }
+        }
+      }
+    },
+    "Продолжить редактирование": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep editing"
+          }
+        }
+      }
+    },
+    "Если выйти сейчас, изменения пропадут.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If you leave now, your changes will be lost."
+          }
+        }
+      }
+    },
+    "Частичный возврат": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partial repayment"
+          }
+        }
+      }
+    },
+    "Сдвиньте — долг погашен": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slide — debt repaid"
+          }
+        }
+      }
+    },
+    "Удалить долг": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete debt"
+          }
+        }
+      }
+    },
+    "Удалить долг?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete debt?"
+          }
+        }
+      }
+    },
+    "История": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "History"
+          }
+        }
+      }
+    },
+    "Дали в долг %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lent %@"
+          }
+        }
+      }
+    },
+    "Взяли в долг %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrowed %@"
+          }
+        }
+      }
+    },
+    "Вернули %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repaid %@"
+          }
+        }
+      }
+    },
+    "раньше · осталось %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "earlier · %@ left"
+          }
+        }
+      }
+    },
+    "осталось %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ left"
+          }
+        }
+      }
+    },
+    "долг погашен": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "debt repaid"
+          }
+        }
+      }
+    },
+    "просрочен": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "overdue"
+          }
+        }
+      }
+    },
+    "дата не найдена": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "date not found"
+          }
+        }
+      }
+    },
+    "можно ≈ %@ в день": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "can spend ≈ %@ a day"
+          }
+        }
+      }
+    },
+    "Потрачено": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spent"
+          }
+        }
+      }
+    },
+    "Это я — переводы себе": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "That's me — own transfers"
+          }
+        }
+      }
+    },
+    "Имена — из выписок и ваших ответов «Кому?». Нажмите на человека — покажу все переводы. Если это вы сами (переводы на свои карты в других банках), удерживайте и выберите «Это я».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Names come from statements and your “Who?” answers. Tap a person to see all transfers. If it's you (transfers to your own cards at other banks), long-press and choose “That's me”."
+          }
+        }
+      }
+    },
+    "Погашены — %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repaid — %lld"
+          }
+        }
+      }
+    },
+    "погашен": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "repaid"
+          }
+        }
+      }
+    },
+    "Погашен %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repaid %@"
+          }
+        }
+      }
+    },
+    "Нажмите на плитку, чтобы показать только эти долги. Отметить перевод как долг можно на экране «Кому были переводы?».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap a tile to show only those debts. You can mark a transfer as a debt on the “Who were the transfers to?” screen."
+          }
+        }
+      }
+    },
+    "Разница": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Net"
+          }
+        }
+      }
+    },
+    "Отметить перевод как долг можно на экране «Кому были переводы?».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You can mark a transfer as a debt on the “Who were the transfers to?” screen."
+          }
+        }
+      }
+    },
+    "Долг погашен": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debt repaid"
+          }
+        }
+      }
+    },
+    "Кому дали": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lent to"
+          }
+        }
+      }
+    },
+    "У кого взяли": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Borrowed from"
+          }
+        }
+      }
+    },
+    "Погашенный долг нельзя изменить. Если отметили по ошибке — «⋯» → «Открыть снова».": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A repaid debt can't be changed. If you marked it by mistake, use “⋯” → “Reopen”."
+          }
+        }
+      }
+    },
+    "Назад": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
+          }
+        }
+      }
+    },
+    "Ничего не найдено": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing found"
+          }
+        }
+      }
+    },
+    "Нет операций с такими фильтрами.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No transactions match these filters."
+          }
+        }
+      }
+    },
+    "Сбросить фильтры": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reset filters"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
