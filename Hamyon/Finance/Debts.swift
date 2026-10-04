@@ -70,7 +70,7 @@ extension ExpenseStore {
 
     /// Разово: долги из «Разделить счёт», созданные до поля `billTitle` (срок ровно через 3 дня, название в заметке).
     func moveBillTitles() {
-        guard !UserDefaults.standard.bool(forKey: "debtBillTitles1") else { return }
+        guard !Account.defaults.bool(forKey: "debtBillTitles1") else { return }
         for debt in debts where debt.billTitle == nil && !debt.note.isEmpty {
             guard let due = debt.dueDate,
                   let expected = Calendar.current.date(byAdding: .day, value: 3, to: debt.createdAt),
@@ -79,7 +79,7 @@ extension ExpenseStore {
             debt.note = ""
         }
         try? modelContext.save()
-        UserDefaults.standard.set(true, forKey: "debtBillTitles1")
+        Account.defaults.set(true, forKey: "debtBillTitles1")
     }
 
     /// Сколько всего должны вам и сколько должны вы.

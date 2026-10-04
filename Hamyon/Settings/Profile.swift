@@ -7,7 +7,7 @@ import UIKit
 final class Profile {
     static let shared = Profile()
 
-    @ObservationIgnored private let defaults = UserDefaults.standard
+    @ObservationIgnored private let defaults = Account.defaults
 
     var name: String { didSet { defaults.set(name, forKey: "profileName") } }
     var phone: String { didSet { defaults.set(phone, forKey: "profilePhone") } }
@@ -15,17 +15,17 @@ final class Profile {
     /// Карты для переводов вам. Полный номер — в связке ключей, а не в UserDefaults.
     var payoutCards: [PayoutCard] {
         didSet { Keychain.set((try? JSONEncoder().encode(payoutCards)).flatMap { String(data: $0, encoding: .utf8) } ?? "",
-                              for: "payout_cards") }
+                              for: Account.scoped("payout_cards")) }
     }
 
     private init() {
         name = defaults.string(forKey: "profileName") ?? ""
         phone = defaults.string(forKey: "profilePhone") ?? ""
-        payoutCards = Keychain.get("payout_cards").flatMap { try? JSONDecoder().decode([PayoutCard].self, from: Data($0.utf8)) } ?? []
+        payoutCards = Keychain.get(Account.scoped("payout_cards")).flatMap { try? JSONDecoder().decode([PayoutCard].self, from: Data($0.utf8)) } ?? []
         photo = (try? Data(contentsOf: Self.photoURL)).flatMap(UIImage.init(data:))
     }
 
-    private static var photoURL: URL { URL.applicationSupportDirectory.appending(path: "profile-photo.jpg") }
+    private static var photoURL: URL { URL.applicationSupportDirectory.appending(path: Account.scoped("profile-photo.jpg")) }
 
     /// Фото уменьшаем до 600 pt — для круга в профиле больше не нужно.
     func setPhoto(_ image: UIImage?) {

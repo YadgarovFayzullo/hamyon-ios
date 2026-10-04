@@ -11,6 +11,7 @@ struct SettingsView: View {
     @State private var showImport = false
     @State private var notifyEachSMS = Notifier.notifyEachSMS
     @State private var testSent = false
+    @State private var demoSent = false
     @State private var language = AppLanguage.current
     @State private var askRestart = false
 
@@ -23,6 +24,29 @@ struct SettingsView: View {
     var body: some View {
         @Bindable var settings = settings
         Form {
+            if DemoMode.isOn {
+                Section {
+                    Button {
+                        Task { await DemoMode.sendSMS() }
+                        demoSent = true
+                    } label: {
+                        Label(demoSent ? String(localized: "Уведомление придёт через 10 с") : String(localized: "Прислать SMS через 10 с"),
+                              systemImage: demoSent ? "checkmark" : "message.badge")
+                    }
+                    .disabled(demoSent)
+                    .task(id: demoSent) {
+                        guard demoSent else { return }
+                        try? await Task.sleep(for: .seconds(11))
+                        demoSent = false
+                    }
+                    Button("Сбросить демо-данные", role: .destructive) { store.resetDemo() }
+                } header: {
+                    Text("Демо для съёмки")
+                } footer: {
+                    Text("Нажмите и выйдите на главный экран — через 10 секунд придёт уведомление, как после настоящей SMS банка. Это отдельное приложение: основной Hamyon и его данные оно не трогает.")
+                }
+            }
+
             Section {
                 Picker("Тема", selection: $settings.theme) {
                     ForEach(AppTheme.allCases) { Text($0.title).tag($0) }

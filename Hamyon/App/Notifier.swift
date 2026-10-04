@@ -30,8 +30,8 @@ enum Notifier {
     }
 
     static var notifyEachSMS: Bool {
-        get { UserDefaults.standard.object(forKey: "notifyEachSMS") as? Bool ?? true }
-        set { UserDefaults.standard.set(newValue, forKey: "notifyEachSMS") }
+        get { Account.defaults.object(forKey: "notifyEachSMS") as? Bool ?? true }
+        set { Account.defaults.set(newValue, forKey: "notifyEachSMS") }
     }
 
     // MARK: - После SMS
@@ -76,7 +76,10 @@ enum Notifier {
             }
             content.categoryIdentifier = transferCategory
         } else {
-            content.body = budgetLine(for: expense, store: store) ?? balanceLine(for: expense) ?? ""
+            // Категория — всегда: сразу видно, что Hamyon сам разложил операцию.
+            let detail = budgetLine(for: expense, store: store) ?? balanceLine(for: expense)
+            let category = expense.category.title
+            content.body = detail?.hasPrefix(category) == true ? detail! : [category, detail].compactMap { $0 }.joined(separator: " · ")
         }
         return content
     }
@@ -201,8 +204,16 @@ enum Notifier {
         center.removePendingNotificationRequests(withIdentifiers: [id])
     }
 
+    /// Съёмка видео (`-demoNotifyAt` в симуляторе, «Прислать SMS» в Hamyon Demo): уведомление в заданный момент,
+    /// а не сразу — приложение успевает уйти с экрана, и баннер приходит на главный экран, как в жизни.
+    static var demoNotifyAt: Date?
+
     private static func post(_ content: UNMutableNotificationContent, id: String) {
-        center.add(UNNotificationRequest(identifier: id, content: content, trigger: nil))
+        var trigger: UNNotificationTrigger?
+        if let at = demoNotifyAt, at.timeIntervalSinceNow > 0.5 {
+            trigger = UNTimeIntervalNotificationTrigger(timeInterval: at.timeIntervalSinceNow, repeats: false)
+        }
+        center.add(UNNotificationRequest(identifier: id, content: content, trigger: trigger))
     }
 }
 

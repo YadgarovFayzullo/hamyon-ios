@@ -10,7 +10,7 @@ struct PeopleView: View {
 
     private enum Range: String, Hashable { case month, quarter, all }
     /// По умолчанию — всё время: так сразу видно, сколько всего ушло человеку. Выбор запоминается.
-    @AppStorage("peopleRange") private var range: Range = .all
+    @AppStorage("peopleRange", store: Account.defaults) private var range: Range = .all
     /// «Это я» меняет все переводы человеку сразу — сначала спрашиваем.
     @State private var confirmMe: String?
 
@@ -226,12 +226,12 @@ enum WeekAI {
         )
         guard let summary = object["summary"] as? String, !summary.isEmpty else { throw AIError.noResult }
         let result = Result(summary: summary, tips: object["tips"] as? [String] ?? [])
-        UserDefaults.standard.set(try? JSONEncoder().encode(result), forKey: key(week.interval))
+        Account.defaults.set(try? JSONEncoder().encode(result), forKey: key(week.interval))
         return result
     }
 
     static func cached(_ interval: DateInterval) -> Result? {
-        UserDefaults.standard.data(forKey: key(interval)).flatMap { try? JSONDecoder().decode(Result.self, from: $0) }
+        Account.defaults.data(forKey: key(interval)).flatMap { try? JSONDecoder().decode(Result.self, from: $0) }
     }
 
     private static func key(_ interval: DateInterval) -> String {

@@ -231,12 +231,32 @@
         }
       }
     },
+    "Hamyon в демо-аккаунте: операция добавится в основной, когда вы на него переключитесь." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hamyon is in the demo account: the transaction will be added to your main account when you switch back."
+          }
+        }
+      }
+    },
     "Hamyon видит только контакты, которые вы выбрали." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hamyon only sees the contacts you chose."
+          }
+        }
+      }
+    },
+    "Hamyon закроется — откройте его снова, и он запустится в выбранном аккаунте." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hamyon will close — open it again and it will start in the chosen account."
           }
         }
       }
@@ -347,6 +367,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Auto"
+          }
+        }
+      }
+    },
+    "Аккаунт" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account"
           }
         }
       }
@@ -567,6 +597,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Your name"
+          }
+        }
+      }
+    },
+    "Ваши операции и карты" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your transactions and cards"
           }
         }
       }
@@ -1147,6 +1187,46 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Splitting the bill"
+          }
+        }
+      }
+    },
+    "Демо" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo"
+          }
+        }
+      }
+    },
+    "Демо для съёмки" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo for filming"
+          }
+        }
+      }
+    },
+    "Демо — отдельные данные для съёмки: основной аккаунт и его операции не меняются. SMS, пришедшие в демо, добавятся в основной, когда вы на него вернётесь." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo has separate data for filming: your main account and its transactions stay untouched. SMS that arrive while in demo are added to the main account when you switch back."
+          }
+        }
+      }
+    },
+    "Демо-данные для съёмки рекламы" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo data for filming ads"
           }
         }
       }
@@ -2561,6 +2641,16 @@
         }
       }
     },
+    "Нажмите и выйдите на главный экран — через 10 секунд придёт уведомление, как после настоящей SMS банка. Это отдельное приложение: основной Hamyon и его данные оно не трогает." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap and go to the Home Screen — in 10 seconds a notification arrives, just like after a real bank SMS. This is a separate app: it doesn't touch the main Hamyon or its data."
+          }
+        }
+      }
+    },
     "Нажмите и скажите, на что потратили." : {
       "localizations" : {
         "en" : {
@@ -3341,6 +3431,16 @@
         }
       }
     },
+    "Основной" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main"
+          }
+        }
+      }
+    },
     "Осталось %@" : {
       "localizations" : {
         "en" : {
@@ -3707,6 +3807,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Transfers"
+          }
+        }
+      }
+    },
+    "Переключить" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switch"
+          }
+        }
+      }
+    },
+    "Переключиться на «%@»?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Switch to “%@”?"
           }
         }
       }
@@ -4311,6 +4431,16 @@
         }
       }
     },
+    "Прислать SMS через 10 с" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Send an SMS in 10 s"
+          }
+        }
+      }
+    },
     "Прислать пробное" : {
       "localizations" : {
         "en" : {
@@ -4627,6 +4757,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "From"
+          }
+        }
+      }
+    },
+    "Сбросить демо-данные" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset demo data"
           }
         }
       }
@@ -5267,6 +5407,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Remove limit"
+          }
+        }
+      }
+    },
+    "Уведомление придёт через 10 с" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notification in 10 s"
           }
         }
       }

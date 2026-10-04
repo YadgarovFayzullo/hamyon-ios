@@ -90,14 +90,14 @@ extension ExpenseStore {
 
     /// Карты (последние 4 цифры), переводы на которые и с которых — себе.
     var ownCounterpartCards: Set<String> {
-        get { Set(UserDefaults.standard.stringArray(forKey: "ownCounterpartCards") ?? []) }
-        set { UserDefaults.standard.set(Array(newValue), forKey: "ownCounterpartCards") }
+        get { Set(Account.defaults.stringArray(forKey: "ownCounterpartCards") ?? []) }
+        set { Account.defaults.set(Array(newValue), forKey: "ownCounterpartCards") }
     }
 
     /// Имена в выписке, которые на самом деле вы («YADGAROV FAYZULLO»).
     var ownCounterpartNames: Set<String> {
-        get { Set(UserDefaults.standard.stringArray(forKey: "ownCounterpartNames") ?? []) }
-        set { UserDefaults.standard.set(Array(newValue), forKey: "ownCounterpartNames") }
+        get { Set(Account.defaults.stringArray(forKey: "ownCounterpartNames") ?? []) }
+        set { Account.defaults.set(Array(newValue), forKey: "ownCounterpartNames") }
     }
 
     func learnOwn(card: String?, name: String?) {

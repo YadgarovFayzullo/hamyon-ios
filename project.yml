@@ -55,12 +55,28 @@ targets:
         CFBundleURLTypes:
           - CFBundleURLName: uz.fayzullo.hamyon
             CFBundleURLSchemes: [hamyon]
+    scheme:
+      testTargets:
+        - HamyonUITests
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: uz.fayzullo.hamyon
         TARGETED_DEVICE_FAMILY: "1"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+  # Только для съёмки промо в симуляторе: нажимает то, что нельзя нажать командой.
+  HamyonUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - HamyonUITests
+    dependencies:
+      - target: Hamyon
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: uz.fayzullo.hamyon.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Hamyon
   HamyonWidget:
     type: app-extension
     platform: iOS

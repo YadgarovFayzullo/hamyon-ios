@@ -8,7 +8,7 @@ struct InviteView: View {
     @Environment(ExpenseStore.self) private var store
     @Environment(\.openURL) private var openURL
 
-    @AppStorage("inviteText") private var inviteText = InviteView.defaultText
+    @AppStorage("inviteText", store: Account.defaults) private var inviteText = InviteView.defaultText
     @State private var access = CNContactStore.authorizationStatus(for: .contacts)
     @State private var contacts: [PhoneContact] = []
     @State private var loading = true
@@ -384,13 +384,13 @@ enum InviteLog {
     }
 
     static var all: [String: Record] {
-        UserDefaults.standard.data(forKey: "invites").flatMap { try? JSONDecoder().decode([String: Record].self, from: $0) } ?? [:]
+        Account.defaults.data(forKey: "invites").flatMap { try? JSONDecoder().decode([String: Record].self, from: $0) } ?? [:]
     }
 
     static func mark(_ key: String, via channel: Channel) {
         var records = all
         records[key] = Record(date: .now, via: channel)
-        UserDefaults.standard.set(try? JSONEncoder().encode(records), forKey: "invites")
+        Account.defaults.set(try? JSONEncoder().encode(records), forKey: "invites")
     }
 }
 

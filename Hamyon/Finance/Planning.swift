@@ -9,7 +9,7 @@ final class BudgetStore {
     static let shared = BudgetStore()
 
     /// categoryRaw → лимит в сумах; ключ `total` — общий лимит.
-    private(set) var limits: [String: Double] = UserDefaults.standard.dictionary(forKey: "budgets") as? [String: Double] ?? [:]
+    private(set) var limits: [String: Double] = Account.defaults.dictionary(forKey: "budgets") as? [String: Double] ?? [:]
 
     var total: Double? { limits["total"] }
 
@@ -17,7 +17,7 @@ final class BudgetStore {
 
     func set(_ value: Double?, for key: String) {
         limits[key] = (value ?? 0) > 0 ? value : nil
-        UserDefaults.standard.set(limits, forKey: "budgets")
+        Account.defaults.set(limits, forKey: "budgets")
         WidgetSnapshot.update(from: ExpenseStore.shared)
     }
 
@@ -36,8 +36,8 @@ final class BudgetStore {
     func shouldAlert(_ key: String, level: Int, month: DateInterval) -> Bool {
         let c = Calendar.current.dateComponents([.year, .month], from: month.start)
         let id = "budgetAlert-\(c.year ?? 0)-\(c.month ?? 0)-\(key)-\(level)"
-        guard !UserDefaults.standard.bool(forKey: id) else { return false }
-        UserDefaults.standard.set(true, forKey: id)
+        guard !Account.defaults.bool(forKey: id) else { return false }
+        Account.defaults.set(true, forKey: id)
         return true
     }
 }
@@ -80,7 +80,7 @@ final class RecurringStore {
     static let shared = RecurringStore()
 
     private(set) var items: [RecurringPayment] = {
-        guard let data = UserDefaults.standard.data(forKey: "recurring") else { return [] }
+        guard let data = Account.defaults.data(forKey: "recurring") else { return [] }
         return (try? JSONDecoder().decode([RecurringPayment].self, from: data)) ?? []
     }()
 
@@ -114,7 +114,7 @@ final class RecurringStore {
     }
 
     private func persist() {
-        UserDefaults.standard.set(try? JSONEncoder().encode(items), forKey: "recurring")
+        Account.defaults.set(try? JSONEncoder().encode(items), forKey: "recurring")
     }
 
     /// Уже оплачено в этом месяце: есть операция того же получателя на похожую сумму.
@@ -206,8 +206,8 @@ extension ExpenseStore {
 final class Rates {
     static let shared = Rates()
 
-    private(set) var rates: [String: Double] = UserDefaults.standard.dictionary(forKey: "cbuRates") as? [String: Double] ?? [:]
-    private(set) var updated: Date? = UserDefaults.standard.object(forKey: "cbuRatesDate") as? Date
+    private(set) var rates: [String: Double] = Account.defaults.dictionary(forKey: "cbuRates") as? [String: Double] ?? [:]
+    private(set) var updated: Date? = Account.defaults.object(forKey: "cbuRatesDate") as? Date
 
     func rate(_ currency: String) -> Double? { currency == "UZS" ? 1 : rates[currency] }
 
@@ -226,7 +226,7 @@ final class Rates {
         guard !result.isEmpty else { return }
         rates = result
         updated = .now
-        UserDefaults.standard.set(result, forKey: "cbuRates")
-        UserDefaults.standard.set(Date.now, forKey: "cbuRatesDate")
+        Account.defaults.set(result, forKey: "cbuRates")
+        Account.defaults.set(Date.now, forKey: "cbuRatesDate")
     }
 }

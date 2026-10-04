@@ -156,12 +156,12 @@ enum ExpenseAnalyzer {
     // MARK: - Кэш: не тратим запросы при каждом открытии экрана
 
     static func cached(for month: DateInterval) -> ExpenseAnalysis? {
-        guard let data = UserDefaults.standard.data(forKey: key(month)) else { return nil }
+        guard let data = Account.defaults.data(forKey: key(month)) else { return nil }
         return try? JSONDecoder().decode(ExpenseAnalysis.self, from: data)
     }
 
     static func cache(_ analysis: ExpenseAnalysis, for month: DateInterval) {
-        UserDefaults.standard.set(try? JSONEncoder().encode(analysis), forKey: key(month))
+        Account.defaults.set(try? JSONEncoder().encode(analysis), forKey: key(month))
     }
 
     private static func key(_ month: DateInterval) -> String {

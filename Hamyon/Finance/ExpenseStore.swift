@@ -14,24 +14,30 @@ final class ExpenseStore {
     static let cashCard = "cash"
 
     /// Учитывать наличные отдельным кошельком: снятие в банкомате — не трата, тратой будут покупки за наличные.
-    var cashTracking: Bool = UserDefaults.standard.bool(forKey: "cashTracking") {
+    var cashTracking: Bool = Account.defaults.bool(forKey: "cashTracking") {
         didSet { defaults.set(cashTracking, forKey: "cashTracking") }
     }
     /// Сколько было в кошельке на дату `cashBaseDate` (вписали вручную).
-    var cashBase: Double = UserDefaults.standard.double(forKey: "cashBase") {
+    var cashBase: Double = Account.defaults.double(forKey: "cashBase") {
         didSet { defaults.set(cashBase, forKey: "cashBase") }
     }
-    var cashBaseDate: Date = UserDefaults.standard.object(forKey: "cashBaseDate") as? Date ?? .distantPast {
+    var cashBaseDate: Date = Account.defaults.object(forKey: "cashBaseDate") as? Date ?? .distantPast {
         didSet { defaults.set(cashBaseDate, forKey: "cashBaseDate") }
     }
 
     @ObservationIgnored private let container: ModelContainer
     @ObservationIgnored private var context: ModelContext { container.mainContext }
-    @ObservationIgnored private let defaults = UserDefaults.standard
+    @ObservationIgnored private let defaults = Account.defaults
 
     private init() {
         do {
-            container = try ModelContainer(for: Expense.self, Debt.self)
+            if Account.current == .demo {
+                // Демо — отдельный файл. Основной аккаунт — хранилище по умолчанию, как до появления аккаунтов.
+                try? FileManager.default.createDirectory(at: .applicationSupportDirectory, withIntermediateDirectories: true)
+                container = try ModelContainer(for: Expense.self, Debt.self, configurations: ModelConfiguration(url: Account.demoStoreURL))
+            } else {
+                container = try ModelContainer(for: Expense.self, Debt.self)
+            }
         } catch {
             // Если база повреждена — работаем в памяти, чтобы приложение не падало.
             container = try! ModelContainer(for: Expense.self, Debt.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
@@ -67,6 +73,10 @@ final class ExpenseStore {
         }
         if ProcessInfo.processInfo.arguments.contains("-seedExpenses") && expenses.isEmpty { seedDemo() }
         #endif
+        if DemoMode.isOn && expenses.isEmpty {
+            seedDemo()
+            DemoMode.firstLaunchSetup()
+        }
     }
 
     #if DEBUG
@@ -94,6 +104,9 @@ final class ExpenseStore {
         } catch { print("EXPTEST analysis error \(error)") }
     }
 
+    #endif
+
+    /// Демо-данные: симулятор (`-seedExpenses`) и Hamyon Demo для съёмки рекламы.
     private func seedDemo() {
         let cal = Calendar.current
         func at(_ daysAgo: Int, _ hour: Int) -> Date {
@@ -109,7 +122,16 @@ final class ExpenseStore {
         add(rows.map { ExpenseDraft(title: $0.0, amount: $0.1, category: $0.2, date: at($0.3, $0.4)) }, source: .manual)
         add([ExpenseDraft(title: "Зарплата", amount: 9_000_000, category: .income, isIncome: true, date: at(2, 10))], source: .manual)
     }
-    #endif
+
+    /// Hamyon Demo: начать съёмку заново — те же демо-данные, SMS снова с первого магазина.
+    func resetDemo() {
+        guard DemoMode.isOn else { return }
+        for expense in expenses { context.delete(expense) }
+        for debt in debts { context.delete(debt) }
+        save()
+        Account.defaults.removeObject(forKey: "demoSMSIndex")
+        seedDemo()
+    }
 
     func reload() {
         reloadLog()
@@ -361,7 +383,7 @@ final class ExpenseStore {
     // MARK: - Журнал запусков из «Команд»
 
     /// Последние вызовы действия «Добавить расход из SMS» — чтобы было видно, доходят ли SMS.
-    private(set) var smsLog: [String] = UserDefaults.standard.stringArray(forKey: "smsLog") ?? []
+    private(set) var smsLog: [String] = Account.defaults.stringArray(forKey: "smsLog") ?? []
 
     func log(_ line: String) {
         let f = DateFormatter()
@@ -519,7 +541,7 @@ final class ExpenseStore {
     private(set) var cardMeta: [String: CardMeta] = ExpenseStore.loadCardMeta()
 
     private static func loadCardMeta() -> [String: CardMeta] {
-        let defaults = UserDefaults.standard
+        let defaults = Account.defaults
         var meta = (defaults.data(forKey: "cardMeta")).flatMap { try? JSONDecoder().decode([String: CardMeta].self, from: $0) } ?? [:]
         // Старые названия карт из первой версии.
         for (card, name) in defaults.dictionary(forKey: "cardNames") as? [String: String] ?? [:] where meta[card] == nil {

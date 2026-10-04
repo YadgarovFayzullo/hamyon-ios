@@ -10,7 +10,7 @@ final class AppSettings {
     static let defaultModel = "claude-haiku-4-5"
     static let defaultGeminiModel = "gemini-3.5-flash-lite"
 
-    @ObservationIgnored private let defaults = UserDefaults.standard
+    @ObservationIgnored private let defaults = Account.defaults
 
     var apiKey: String { didSet { Keychain.set(apiKey, for: "anthropic_api_key") } }
     var model: String { didSet { defaults.set(model, forKey: "model") } }

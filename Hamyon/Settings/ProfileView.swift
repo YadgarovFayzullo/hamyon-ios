@@ -11,6 +11,7 @@ struct ProfileView: View {
     @State private var invited = InviteLog.all.count
     /// `-openSettings` вместе с `-openProfile`: сразу «Настройки» (проверка в симуляторе).
     @State private var showSettings = ProcessInfo.processInfo.arguments.contains("-openSettings")
+    @State private var switchTarget: Account?
 
     var body: some View {
         List {
@@ -41,6 +42,21 @@ struct ProfileView: View {
             }
 
             Section {
+                ForEach(Account.allCases) { account in
+                    Button {
+                        if account != Account.current { switchTarget = account }
+                    } label: {
+                        accountRow(account)
+                    }
+                    .tint(.primary)
+                }
+            } header: {
+                Text("Аккаунт")
+            } footer: {
+                Text("Демо — отдельные данные для съёмки: основной аккаунт и его операции не меняются. SMS, пришедшие в демо, добавятся в основной, когда вы на него вернётесь.")
+            }
+
+            Section {
                 NavigationLink { SettingsView() } label: {
                     HubRow(title: "Настройки", symbol: "gearshape.fill", color: .gray)
                 }
@@ -62,9 +78,49 @@ struct ProfileView: View {
         .listSectionSpacing(.compact)
         .navigationTitle("Профиль")
         .navigationBarTitleDisplayMode(.inline)
+        .alert(String(localized: "Переключиться на «\(switchTarget.map(title(for:)) ?? "")»?"),
+               isPresented: Binding(get: { switchTarget != nil }, set: { if !$0 { switchTarget = nil } })) {
+            Button("Переключить") {
+                guard let switchTarget else { return }
+                Account.switchTo(switchTarget)
+                // Хранилище и настройки открываются при запуске — новый аккаунт начнётся с нового запуска.
+                exit(0)
+            }
+            Button("Отменить", role: .cancel) {}
+        } message: {
+            Text("Hamyon закроется — откройте его снова, и он запустится в выбранном аккаунте.")
+        }
         .navigationDestination(isPresented: $showPersonal) { PersonalDataView() }
         .navigationDestination(isPresented: $showSettings) { SettingsView() }
         .sheet(isPresented: $showInvite, onDismiss: { invited = InviteLog.all.count }) { InviteView() }
+    }
+
+    private func title(for account: Account) -> String {
+        switch account {
+        case .main: Account.mainName.isEmpty ? String(localized: "Основной") : Account.mainName
+        case .demo: String(localized: "Демо")
+        }
+    }
+
+    private func accountRow(_ account: Account) -> some View {
+        let current = account == Account.current
+        let initials = account == .demo ? "Д" : String(Account.mainName.split(separator: " ").prefix(2).compactMap(\.first)).uppercased()
+        return HStack(spacing: 12) {
+            AvatarCircle(image: current ? profile.photo : nil, initials: initials, color: account == .demo ? .orange : .green, size: 34)
+            VStack(alignment: .leading, spacing: 1) {
+                Text(title(for: account)).foregroundStyle(.primary)
+                Text(account == .main ? String(localized: "Ваши операции и карты") : String(localized: "Демо-данные для съёмки рекламы"))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            Spacer()
+            if current {
+                Image(systemName: "checkmark")
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.green)
+            }
+        }
+        .contentShape(Rectangle())
     }
 
     private var header: some View {

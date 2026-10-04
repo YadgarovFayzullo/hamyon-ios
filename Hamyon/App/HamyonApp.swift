@@ -111,6 +111,15 @@ struct RootView: View {
             if let i = args.firstIndex(of: "-forgetOwnName"), i + 1 < args.count {
                 ExpenseStore.shared.forgetOwnName(args[i + 1])
             }
+            // `-requestNotifications`: спросить разрешение сразу — в симуляторе «Разрешить» нажимает UI-тест.
+            if args.contains("-requestNotifications") { await Notifier.requestPermission() }
+            // `-demoSMS "Xarid: …"`: как будто пришла SMS банка — тот же путь, что у автоматизации «Команд».
+            if let i = args.firstIndex(of: "-demoSMS"), i + 1 < args.count {
+                if let j = args.firstIndex(of: "-demoNotifyAt"), j + 1 < args.count, let at = TimeInterval(args[j + 1]) {
+                    Notifier.demoNotifyAt = Date(timeIntervalSince1970: at)
+                }
+                _ = try? await SMSIntake.handle(args[i + 1])
+            }
             // `-testNotification`: пробное уведомление, как кнопка в настройках.
             if args.contains("-testNotification") { await Notifier.sendTest(store: ExpenseStore.shared) }
         }
@@ -152,6 +161,8 @@ struct RootView: View {
                 Notifier.scheduleWeekly(store: store)
                 WidgetSnapshot.update(from: store)
                 Task { await Rates.shared.refresh() }
+                // SMS, пришедшие, пока был открыт демо-аккаунт, — в основной.
+                Task { await SMSIntake.processPending() }
             case .inactive:
                 if old == .active && lock.state == .unlocked { privacyCover = true }
             case .background:

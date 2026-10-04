@@ -23,7 +23,7 @@ struct ExpensesView: View {
     @State private var showImport = false
     @State private var showShare = ProcessInfo.processInfo.arguments.contains("-previewShare")
     /// Карты, которые учитываются на «Обзоре»; пустой набор — все. Выбор запоминается.
-    @State private var cards = Set(UserDefaults.standard.stringArray(forKey: "overviewCards") ?? [])
+    @State private var cards = Set(Account.defaults.stringArray(forKey: "overviewCards") ?? [])
 
     /// От месяца первой операции до текущего.
     private var months: [DateInterval] {
@@ -51,7 +51,7 @@ struct ExpensesView: View {
             onConnectSMS: { showSMSSetup = true }
         )
         .background(Color(.systemGroupedBackground))
-        .onChange(of: cards) { _, cards in UserDefaults.standard.set(Array(cards), forKey: "overviewCards") }
+        .onChange(of: cards) { _, cards in Account.defaults.set(Array(cards), forKey: "overviewCards") }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
