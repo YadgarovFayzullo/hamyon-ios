@@ -311,6 +311,16 @@
         }
       }
     },
+    "«%@» — это вы?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Is “%@” you?"
+          }
+        }
+      }
+    },
     "«Авто» — как в настройках iPhone." : {
       "localizations" : {
         "en" : {
@@ -771,6 +781,16 @@
         }
       }
     },
+    "Все переводы этому человеку станут переводами себе — и в будущих выписках тоже. Вернуть можно в «Профиль → Личные данные»." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All transfers to this person will count as transfers to yourself, in future statements too. You can undo it in Profile → Personal info."
+          }
+        }
+      }
+    },
     "Всего на картах" : {
       "localizations" : {
         "en" : {
@@ -1047,6 +1067,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yes, recurring"
+          }
+        }
+      }
+    },
+    "Да, это я" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes, it's me"
           }
         }
       }
@@ -5101,12 +5131,12 @@
         }
       }
     },
-    "Так банк пишет ваше имя. Переводы на эти имена считаются переводами себе." : {
+    "Так банк пишет ваше имя. Переводы на эти имена считаются переводами себе. Отметили чужое имя — смахните его влево, и его переводы снова станут обычными." : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "How your bank writes your name. Transfers to these names count as transfers to yourself."
+            "value" : "How your bank writes your name. Transfers to these names count as transfers to yourself. Marked someone else by mistake? Swipe the name left and their transfers become regular again."
           }
         }
       }

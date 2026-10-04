@@ -11,6 +11,8 @@ struct PeopleView: View {
     private enum Range: String, Hashable { case month, quarter, all }
     /// По умолчанию — всё время: так сразу видно, сколько всего ушло человеку. Выбор запоминается.
     @AppStorage("peopleRange") private var range: Range = .all
+    /// «Это я» меняет все переводы человеку сразу — сначала спрашиваем.
+    @State private var confirmMe: String?
 
     private var interval: DateInterval {
         let calendar = Calendar.current
@@ -91,7 +93,7 @@ struct PeopleView: View {
                     .contextMenu {
                         if row.known {
                             Button("Это я — переводы себе", systemImage: "arrow.triangle.2.circlepath") {
-                                withAnimation { store.markPersonAsMe(row.name) }
+                                confirmMe = row.name
                             }
                         }
                     }
@@ -101,6 +103,16 @@ struct PeopleView: View {
             }
         }
         .navigationTitle("Люди")
+        .confirmationDialog(String(localized: "«\(confirmMe ?? "")» — это вы?"),
+                            isPresented: Binding(get: { confirmMe != nil }, set: { if !$0 { confirmMe = nil } }),
+                            titleVisibility: .visible) {
+            Button("Да, это я") {
+                if let name = confirmMe { withAnimation { store.markPersonAsMe(name) } }
+            }
+            Button("Отменить", role: .cancel) {}
+        } message: {
+            Text("Все переводы этому человеку станут переводами себе — и в будущих выписках тоже. Вернуть можно в «Профиль → Личные данные».")
+        }
     }
 }
 

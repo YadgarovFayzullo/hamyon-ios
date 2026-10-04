@@ -201,15 +201,14 @@ struct PersonalDataView: View {
                         Text(name.split(separator: " ").map { $0.capitalized }.joined(separator: " "))
                     }
                     .onDelete { offsets in
-                        var names = store.ownCounterpartNames
-                        for index in offsets { names.remove(ownNames[index]) }
-                        store.ownCounterpartNames = names
-                        ownNames.remove(atOffsets: offsets)
+                        // Вместе с именем возвращаются и его переводы, отмеченные «себе» по ошибке.
+                        for index in offsets { store.forgetOwnName(ownNames[index]) }
+                        ownNames = store.ownCounterpartNames.sorted()
                     }
                 } header: {
                     Text("Вы в выписках")
                 } footer: {
-                    Text("Так банк пишет ваше имя. Переводы на эти имена считаются переводами себе.")
+                    Text("Так банк пишет ваше имя. Переводы на эти имена считаются переводами себе. Отметили чужое имя — смахните его влево, и его переводы снова станут обычными.")
                 }
             }
         }

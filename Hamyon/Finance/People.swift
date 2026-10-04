@@ -47,6 +47,27 @@ extension ExpenseStore {
         linkInternalTransfers()
     }
 
+    /// «Это не я» — обратное к «Это я»: имя уходит из «Вы в выписках», а его переводы, отмеченные «себе»
+    /// по этому имени, снова считаются переводами человеку. Переводы на вашу известную карту и найденные пары не трогаем.
+    func forgetOwnName(_ name: String) {
+        let key = Expense.personKey(name)
+        let reversed = Expense.reversedPersonKey(name)
+        func samePerson(_ other: String) -> Bool {
+            let otherKey = Expense.personKey(other)
+            return otherKey == key || otherKey == reversed || Expense.reversedPersonKey(other) == key
+        }
+        // Вместе с вариантами написания: «Rabbimov B.», «Bashirjon R.».
+        ownCounterpartNames = ownCounterpartNames.filter { !samePerson($0) }
+        for expense in expenses where expense.manualInternal && expense.isTransfer {
+            guard let person = expense.person, samePerson(person) else { continue }
+            if let card = expense.counterpartCard, ownCounterpartCards.contains(card) || cards.contains(card) { continue }
+            expense.isInternal = false
+            expense.manualInternal = false
+        }
+        save()
+        linkInternalTransfers()
+    }
+
     /// «Это я»: все переводы этому человеку (в любом порядке имени и фамилии) — себе, и в будущих выписках тоже.
     func markPersonAsMe(_ name: String) {
         let key = Expense.personKey(name)

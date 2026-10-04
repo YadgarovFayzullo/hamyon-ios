@@ -50,6 +50,8 @@ final class ExpenseStore {
             reload()
         }
         fillTransferKinds()
+        // Правила поиска пар меняются — уже записанные переводы перепроверяем при каждом запуске.
+        linkInternalTransfers()
         #if DEBUG
         // `-cardBank 4503:aloqabank:uzcard` — задать банк карты при установке с компьютера.
         let args = ProcessInfo.processInfo.arguments
@@ -164,8 +166,10 @@ final class ExpenseStore {
     /// Обе карты ваши: банк присылает SMS только о ваших картах. Разница сумм — комиссия.
     func linkInternalTransfers() {
         var changed = false
-        let outs = expenses.filter { $0.kind == .transferOut }
-        let ins = expenses.filter { $0.kind == .transferIn }
+        // Строки выписки без типа («Перевод на карту», «SQB» с пометкой «доход») — тоже кандидаты: из-за них
+        // переводы TBC → SQB в одну минуту не склеивались. Найденной паре ставим тип «перевод».
+        let outs = expenses.filter { $0.kind == .transferOut || ($0.kind == nil && !$0.isIncome && !$0.isCash) }
+        let ins = expenses.filter { $0.kind == .transferIn || ($0.kind == nil && $0.isIncome && !$0.isCash) }
         var paired = Set<UUID>()
         for out in outs.sorted(by: { $0.date < $1.date }) {
             let match = ins.first { incoming in
@@ -182,6 +186,11 @@ final class ExpenseStore {
                 let fee = out.amount - match.amount
                 if !out.isInternal || out.fee != fee { out.isInternal = true; out.fee = fee; changed = true }
                 if !match.isInternal { match.isInternal = true; changed = true }
+                for expense in [out, match] where expense.kind == nil {
+                    expense.kindRaw = (expense.isIncome ? ExpenseKind.transferIn : .transferOut).rawValue
+                    expense.categoryRaw = ExpenseCategory.transfers.rawValue
+                    changed = true
+                }
             }
         }
         // Пара распалась (удалили одну из операций) — снова обычный перевод.

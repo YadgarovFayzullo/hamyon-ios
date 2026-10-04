@@ -107,6 +107,10 @@ struct RootView: View {
             if let i = args.firstIndex(of: "-importFile"), i + 1 < args.count {
                 ImportJob.shared.readFiles(args[i + 1].split(separator: ",").map { URL(fileURLWithPath: String($0)) })
             }
+            // `-forgetOwnName "bashirjon rabbimov"`: снять «Это я» с имени — как смахнуть его в «Вы в выписках».
+            if let i = args.firstIndex(of: "-forgetOwnName"), i + 1 < args.count {
+                ExpenseStore.shared.forgetOwnName(args[i + 1])
+            }
             // `-testNotification`: пробное уведомление, как кнопка в настройках.
             if args.contains("-testNotification") { await Notifier.sendTest(store: ExpenseStore.shared) }
         }
