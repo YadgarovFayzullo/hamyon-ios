@@ -192,7 +192,14 @@ struct ImportView: View {
         }
     }
 
+    /// Номера строк считаются по одному снимку списка, а строка рисуется позже — список мог уже сократиться
+    /// (повтор убран, файл дочитан). Вне диапазона — ничего, а не падение (было дважды 4 октября).
+    @ViewBuilder
     private func row(_ index: Int) -> some View {
+        if job.rows.indices.contains(index) { rowContent(index) }
+    }
+
+    private func rowContent(_ index: Int) -> some View {
         let rows = job.rows
         let draft = rows[index].draft
         return Button {
