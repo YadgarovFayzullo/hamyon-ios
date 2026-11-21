@@ -245,14 +245,20 @@ enum WeekAI {
 @MainActor
 enum AskAI {
     static var language: String {
-        Bundle.main.preferredLocalizations.first == "en" ? "English" : "Russian"
+        switch Bundle.main.preferredLocalizations.first {
+        case "en": "English"
+        case "uz": "Uzbek (Latin script)"
+        default: "Russian"
+        }
     }
 
     /// Суммы — как в приложении: «190 000 сум», а не «190000 UZS».
     static var amountStyle: String {
-        language == "English"
-            ? "Write amounts with spaces between thousands and the currency after the number: 190 000 UZS."
-            : "Write amounts with spaces between thousands and the word «сум» after the number: 190 000 сум."
+        switch language {
+        case "English": "Write amounts with spaces between thousands and the currency after the number: 190 000 UZS."
+        case "Uzbek (Latin script)": "Write amounts with spaces between thousands and the word «so'm» after the number: 190 000 so'm."
+        default: "Write amounts with spaces between thousands and the word «сум» after the number: 190 000 сум."
+        }
     }
 
     static func answer(_ question: String, store: ExpenseStore, config: AIConfig, now: Date = .now) async throws -> String {

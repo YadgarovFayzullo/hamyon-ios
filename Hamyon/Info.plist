@@ -49,6 +49,7 @@
 	<array>
 		<string>ru</string>
 		<string>en</string>
+		<string>uz</string>
 	</array>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>

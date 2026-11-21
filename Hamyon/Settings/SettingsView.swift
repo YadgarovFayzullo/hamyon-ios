@@ -69,7 +69,7 @@ struct SettingsView: View {
                 .onChange(of: language) { _, new in
                     AppLanguage.set(new)
                     // Уже показан этот язык (например, «Как в iPhone» = русский) — перезапуск не нужен.
-                    let target = new == .system ? (Locale.preferredLanguages.first?.hasPrefix("en") == true ? AppLanguage.en : .ru) : new
+                    let target = new == .system ? AppLanguage.systemTarget : new
                     if target != AppLanguage.shown { askRestart = true }
                 }
             }

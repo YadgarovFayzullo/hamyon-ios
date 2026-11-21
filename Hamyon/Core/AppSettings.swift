@@ -1,5 +1,6 @@
 import Foundation
 import Security
+import Speech
 import SwiftUI
 import UIKit
 
@@ -46,7 +47,11 @@ final class AppSettings {
         geminiKey = Keychain.get("gemini_api_key") ?? (bundledGemini.count > 20 ? bundledGemini : "")
         geminiModel = defaults.string(forKey: "geminiModel") ?? Self.defaultGeminiModel
         provider = AIProvider(rawValue: defaults.string(forKey: "provider") ?? "") ?? .gemini
-        speechLocale = defaults.string(forKey: "speechLocale") ?? Self.systemSpeechLocale
+        // Сохранённый или системный язык, которого у распознавания на этом iPhone нет (uz-UZ), → русский.
+        let supported = Set(SFSpeechRecognizer.supportedLocales().map { $0.identifier.replacingOccurrences(of: "_", with: "-") })
+        let wanted = defaults.string(forKey: "speechLocale") ?? Self.systemSpeechLocale
+        let cloudUzbek = wanted == SpeechRecognizer.cloudLocale && (Keychain.get("gemini_api_key") != nil || bundledGemini.count > 20)
+        speechLocale = supported.contains(wanted) || cloudUzbek ? wanted : "ru-RU"
         lockEnabled = defaults.object(forKey: "lockEnabled") as? Bool ?? true
         biometricsEnabled = defaults.object(forKey: "biometricsEnabled") as? Bool ?? true
         hideBalances = defaults.bool(forKey: "hideBalances")
@@ -62,6 +67,16 @@ final class AppSettings {
         if codes.contains("uz") { return "uz-UZ" }
         if codes.first == "en" && !Locale.current.identifier.hasSuffix("UZ") { return "en-US" }
         return "ru-RU"
+    }
+
+    /// Узбекская диктовка идёт через Gemini: нужен его ключ. Системный узбекский в iOS заявлен, но на деле недоступен.
+    var canDictateUzbek: Bool {
+        !geminiKey.trimmed.isEmpty
+    }
+
+    /// Конфиг для облачной расшифровки: только Gemini (Claude аудио не принимает).
+    var cloudSpeechConfig: AIConfig? {
+        geminiKey.trimmed.isEmpty ? nil : AIConfig(provider: .gemini, apiKey: geminiKey, model: geminiModel)
     }
 
     var aiConfig: AIConfig {
@@ -112,7 +127,7 @@ enum AppTheme: String, CaseIterable, Identifiable {
 
 /// Язык приложения: свой, а не как в iPhone. iOS читает его при запуске — после выбора нужен перезапуск.
 enum AppLanguage: String, CaseIterable, Identifiable {
-    case system, ru, en
+    case system, ru, en, uz
 
     var id: String { rawValue }
 
@@ -121,6 +136,7 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         case .system: String(localized: "Как в iPhone")
         case .ru: "Русский"
         case .en: "English"
+        case .uz: "O'zbekcha"
         }
     }
 
@@ -144,7 +160,22 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     }
 
     /// Язык, на котором приложение показано сейчас.
-    static var shown: AppLanguage { Bundle.main.preferredLocalizations.first == "en" ? .en : .ru }
+    static var shown: AppLanguage {
+        switch Bundle.main.preferredLocalizations.first {
+        case "en": .en
+        case "uz": .uz
+        default: .ru
+        }
+    }
+
+    /// Какой язык покажет iOS при «Как в iPhone».
+    static var systemTarget: AppLanguage {
+        switch Locale.preferredLanguages.first?.prefix(2) {
+        case "en": .en
+        case "uz": .uz
+        default: .ru
+        }
+    }
 }
 
 enum Keychain {

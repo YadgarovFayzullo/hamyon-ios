@@ -43,7 +43,11 @@ enum ExpenseAnalyzer {
     }
 
     private static var language: String {
-        Bundle.main.preferredLocalizations.first == "en" ? "English" : "Russian"
+        switch Bundle.main.preferredLocalizations.first {
+        case "en": "English"
+        case "uz": "Uzbek (Latin script)"
+        default: "Russian"
+        }
     }
 
     private static var systemPrompt: String {

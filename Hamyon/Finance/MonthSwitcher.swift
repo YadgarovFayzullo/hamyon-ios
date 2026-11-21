@@ -145,25 +145,15 @@ struct MonthSwitcher: View {
             .minimumScaleFactor(0.85)
 
             // Доход и итог месяца — всегда, даже если дохода пока нет (тогда «+0» серым).
-            // Значок вплотную к сумме: у Label между ними ~19 pt, и пара разваливалась.
-            HStack(spacing: 16) {
-                HStack(spacing: 5) {
-                    Image(systemName: "arrow.down.circle.fill")
-                    Text(Money.string(totals.income, sign: true, unit: false))
-                }
-                .foregroundStyle(totals.income > 0 ? Color.green : Color.secondary)
-                HStack(spacing: 5) {
-                    Image(systemName: "equal.circle.fill")
-                    Text(Money.string(totals.income - totals.spent, sign: true, unit: false))
-                }
-                .foregroundStyle(totals.income >= totals.spent ? Color.secondary : Color.red)
+            // С подписями, как в Copilot и Buddy: значки ↓ и = без слов читались как загадка.
+            HStack(spacing: 20) {
+                stat("Доход", Money.string(totals.income, sign: true, unit: false),
+                     color: totals.income > 0 ? .green : .secondary)
+                Divider().frame(height: 30)
+                stat("Итог", Money.string(totals.income - totals.spent, sign: true, unit: false),
+                     color: totals.income >= totals.spent ? .primary : .red)
             }
-            .font(.subheadline.weight(.medium))
-            .monospacedDigit()
-            .lineLimit(1)
-            .contentTransition(.numericText(countsDown: countsDown))
-            .animation(Self.roll, value: index)
-            .padding(.top, 4)
+            .padding(.top, 6)
 
             ForEach(totals.foreign.sorted(by: { $0.key < $1.key }), id: \.key) { currency, amount in
                 Text(Rates.shared.rate(currency) != nil
@@ -199,6 +189,23 @@ struct MonthSwitcher: View {
         .frame(maxWidth: .infinity)
         .padding(.top, 4)
         .padding(.bottom, 8)
+    }
+
+    /// Подпись сверху, сумма под ней — колонка в ряду «Доход | Итог».
+    private func stat(_ title: LocalizedStringKey, _ value: String, color: Color) -> some View {
+        VStack(spacing: 1) {
+            Text(title)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+            Text(value)
+                .font(.subheadline.weight(.semibold))
+                .monospacedDigit()
+                .foregroundStyle(color)
+                .contentTransition(.numericText(countsDown: countsDown))
+                .animation(Self.roll, value: index)
+        }
+        .lineLimit(1)
+        .frame(minWidth: 110)
     }
 
     /// Средний расход в день: в текущем месяце — за прошедшие дни (включая сегодня), в прошлых — за весь месяц.

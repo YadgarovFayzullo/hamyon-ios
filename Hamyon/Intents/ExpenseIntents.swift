@@ -15,6 +15,7 @@ struct AddExpenseFromTextIntent: AppIntent {
         // Открыт демо-аккаунт: настоящая SMS в демо-данные не попадает — ждёт основного аккаунта.
         if Account.current == .demo && !text.isEmpty {
             Account.pendingSMS.append(text)
+            ExpenseStore.shared.log("⏸ демо-аккаунт открыт — SMS ждёт основной аккаунт")
             return .result(dialog: "Hamyon в демо-аккаунте: операция добавится в основной, когда вы на него переключитесь.")
         }
         return .result(dialog: "\(try await SMSIntake.handle(text))")
@@ -47,7 +48,10 @@ enum SMSIntake {
         }
         do {
             let drafts = try await ExpenseParser.parse(text, config: AppSettings.shared.aiConfig, cards: store.cardOptions)
-            if looksLikeSMS && drafts.isEmpty { store.markSkipped(text) }
+            // Без ключа ИИ разбирает грубый локальный парсер: его «не покупка» не повод помнить SMS навсегда.
+            let hasAI = !AppSettings.shared.aiConfig.apiKey.trimmed.isEmpty
+            if looksLikeSMS && drafts.isEmpty && hasAI { store.markSkipped(text) }
+            if !hasAI { store.log("⚠️ нет ключа ИИ — SMS разобрана упрощённо") }
             let added = store.add(drafts, source: looksLikeSMS ? .sms : .voice, rawText: looksLikeSMS ? text : nil)
             if looksLikeSMS { Notifier.notifyAdded(added, store: store) } else { Notifier.checkBudgets(store: store) }
             Notifier.scheduleWeekly(store: store)

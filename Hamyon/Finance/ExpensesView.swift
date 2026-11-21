@@ -198,6 +198,9 @@ private struct MonthPage: View {
                 }
                 .listRowBackground(Color.clear)
             } else {
+                // Сначала — куда ушли деньги (как в Revolut, Copilot), потом совет ИИ.
+                chartsSection(totals)
+
                 Section {
                     Button { showAnalysis = true } label: { AnalysisCard(month: month) }
                         .buttonStyle(.plain)
@@ -206,7 +209,6 @@ private struct MonthPage: View {
                 .listRowInsets(EdgeInsets(top: 0, leading: Self.cardInset, bottom: 0, trailing: Self.cardInset))
                 .fullWidthSection()
 
-                chartsSection(totals)
                 recentSection(monthItems)
             }
         }
@@ -771,7 +773,10 @@ struct ExpenseRow: View {
                 .lineLimit(1)
             }
             Spacer()
-            Text(Money.string(expense.isIncome ? expense.amount : -expense.amount, currency: expense.currency, sign: expense.isIncome))
+            // «сум» в каждой строке — шум, и из-за него обрезалось время в подписи; валюта видна в итоге дня.
+            // Иностранная валюта — со знаком: «$12».
+            Text(Money.string(expense.isIncome ? expense.amount : -expense.amount, currency: expense.currency,
+                              sign: expense.isIncome, unit: expense.currency != "UZS"))
                 .monospacedDigit()
                 .fontWeight(.medium)
                 .fixedSize()

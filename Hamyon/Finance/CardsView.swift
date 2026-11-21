@@ -52,21 +52,11 @@ struct CardsView: View {
                 }
                 .accessibilityLabel(settings.hideBalances ? "Показать остатки" : "Скрыть остатки")
             }
-        }
-        .overlay(alignment: .bottom) {
-            Button { adding = true } label: {
-                Label("Карта", systemImage: "plus")
-                    .font(.system(size: 19, weight: .semibold))
-                    .padding(.horizontal, 28)
-                    .padding(.vertical, 16)
-                    .foregroundStyle(Color(.systemBackground))
-                    .background(Color(.label), in: Capsule())
-                    .shadow(color: .black.opacity(0.2), radius: 12, y: 6)
+            // «+» в панели, как на «Обзоре»: чёрная плашка внизу спорила с микрофоном и зелёным акцентом.
+            ToolbarItem(placement: .topBarTrailing) {
+                Button { adding = true } label: { Image(systemName: "plus") }
+                    .accessibilityLabel("Добавить карту")
             }
-            .buttonStyle(PressStyle())
-            // Над нижней панелью вкладок.
-            .padding(.bottom, 16)
-            .accessibilityLabel("Добавить карту")
         }
         .sheet(item: $editing) { CardEditView(card: $0.id) }
         .sheet(isPresented: $adding) { CardEditView(card: nil) }
@@ -141,8 +131,9 @@ private struct CardRow: View {
                     .lineLimit(1)
                         .padding(.top, 4)
                 }
-                Text("**\(card)")
-                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                Text("•• \(card)")
+                    .font(.subheadline.weight(.medium))
+                    .monospacedDigit()
                     .foregroundStyle(.secondary)
             }
             Spacer(minLength: 0)

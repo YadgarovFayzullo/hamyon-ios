@@ -11,6 +11,7 @@ struct ExpenseVoiceView: View {
     @State private var transcript = ""
     @State private var drafts: [ExpenseDraft] = []
     @State private var editing: ExpenseDraft?
+    @State private var finishing = false
 
     private enum Phase: Equatable {
         case listening, parsing, review
@@ -92,7 +93,8 @@ struct ExpenseVoiceView: View {
                 .buttonStyle(.plain)
                 .accessibilityLabel("Закончить запись")
 
-                SpeechLanguageChips(localeID: Binding(get: { settings.speechLocale }, set: { settings.speechLocale = $0 }), tint: .green) { restart() }
+                SpeechLanguageChips(localeID: Binding(get: { settings.speechLocale }, set: { settings.speechLocale = $0 }), tint: .green,
+                                    cloudUzbek: settings.canDictateUzbek) { restart() }
             }
             .padding(.top, 12)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
@@ -138,11 +140,13 @@ struct ExpenseVoiceView: View {
         drafts = []
         transcript = ""
         phase = .listening
-        await speech.start(localeID: settings.speechLocale)
+        await speech.start(localeID: settings.speechLocale, cloud: settings.cloudSpeechConfig)
     }
 
     private func finish() async {
-        guard phase == .listening else { return }
+        guard phase == .listening, !finishing else { return }
+        finishing = true
+        defer { finishing = false }
         transcript = await speech.stop()
         guard !transcript.isEmpty else {
             phase = .failed(speech.error ?? String(localized: "Ничего не распознано. Попробуйте ещё раз."))
@@ -153,7 +157,8 @@ struct ExpenseVoiceView: View {
             drafts = try await ExpenseParser.parse(transcript, config: settings.aiConfig, cards: store.cardOptions)
             phase = drafts.isEmpty ? .failed(String(localized: "Не нашёл сумму. Скажите, например: «кофе 25 тысяч».")) : .review
         } catch {
-            phase = .failed(error.localizedDescription)
+            let e = error as NSError
+            phase = .failed("parse \(e.domain) \(e.code): \(error.localizedDescription)")
         }
     }
 

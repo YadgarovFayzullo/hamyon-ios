@@ -22,7 +22,18 @@ final class SpeechRecognizer {
 
     @ObservationIgnored private var isStarting = false
 
-    func start(localeID: String) async {
+    /// Узбекского распознавания в iOS нет — речь пишется в файл и расшифровывается Gemini.
+    static let cloudLocale = "uz-UZ"
+    @ObservationIgnored private var cloudConfig: AIConfig?
+    @ObservationIgnored private var cloudFile: AVAudioFile?
+    @ObservationIgnored private var cloudURL: URL?
+    @ObservationIgnored private var cloudHeard = false
+    @ObservationIgnored private var cloudWriteError: String?
+    @ObservationIgnored private var cloudStarted = Date()
+    /// Идёт расшифровка записи в облаке.
+    private(set) var isTranscribing = false
+
+    func start(localeID: String, cloud: AIConfig? = nil) async {
         // Повторный запуск поверх идущего ставил второй tap на микрофон — AVAudioEngine падает.
         guard !isStarting, !isRecording else { return }
         isStarting = true
@@ -39,6 +50,10 @@ final class SpeechRecognizer {
         }
         guard await AVAudioApplication.requestRecordPermission() else {
             error = String(localized: "Разрешите доступ к микрофону в Настройках.")
+            return
+        }
+        if localeID == Self.cloudLocale, let cloud {
+            startCloud(config: cloud)
             return
         }
         guard let recognizer = SFSpeechRecognizer(locale: Locale(identifier: localeID)), recognizer.isAvailable else {
@@ -76,9 +91,116 @@ final class SpeechRecognizer {
         }
     }
 
+    /// Запись для облака: пишем речь в m4a, тишина после слов — стоп.
+    private func startCloud(config: AIConfig) {
+        do {
+            let session = AVAudioSession.sharedInstance()
+            try session.setCategory(.record, mode: .measurement, options: .duckOthers)
+            try session.setActive(true, options: .notifyOthersOnDeactivation)
+
+            let format = engine.inputNode.outputFormat(forBus: 0)
+            let url = FileManager.default.temporaryDirectory.appending(path: "uz-dictation.m4a")
+            try? FileManager.default.removeItem(at: url)
+            let file = try AVAudioFile(forWriting: url, settings: [
+                AVFormatIDKey: kAudioFormatMPEG4AAC,
+                AVSampleRateKey: format.sampleRate,
+                AVNumberOfChannelsKey: format.channelCount,
+                AVEncoderBitRateKey: 48_000 * Int(format.channelCount),
+            ], commonFormat: format.commonFormat, interleaved: format.isInterleaved)
+            cloudFile = file
+            cloudURL = url
+            cloudConfig = config
+            cloudHeard = false
+            cloudWriteError = nil
+            cloudStarted = Date()
+
+            if engine.isRunning { engine.stop() }
+            engine.inputNode.removeTap(onBus: 0)
+            Self.installFileTap(on: engine.inputNode, file: file, onLevel: { [weak self] level in
+                Task { @MainActor in self?.cloudLevel(level) }
+            }, onFail: { [weak self] message in
+                Task { @MainActor in if self?.cloudWriteError == nil { self?.cloudWriteError = message } }
+            })
+            engine.prepare()
+            try engine.start()
+            isRecording = true
+        } catch {
+            self.error = error.localizedDescription
+            engine.inputNode.removeTap(onBus: 0)
+            cloudFile = nil
+            teardown()
+        }
+    }
+
+    private func cloudLevel(_ value: Float) {
+        guard isRecording, cloudConfig != nil else { return }
+        level = value
+        if value > 0.05 {
+            cloudHeard = true
+            scheduleSilenceStop()
+        } else if !cloudHeard && Date().timeIntervalSince(cloudStarted) > 8 {
+            // Никто не заговорил — не держим микрофон вечно.
+            Task { _ = await stop() }
+        }
+    }
+
+    private func transcribeCloud() async -> String {
+        guard let config = cloudConfig, let url = cloudURL,
+              let data = try? Data(contentsOf: url), data.count > 2000 else {
+            let size = cloudURL.flatMap { try? Data(contentsOf: $0).count } ?? -1
+            error = "STT: \(cloudWriteError ?? "файл пуст") (\(size) B)"
+            return ""
+        }
+        isTranscribing = true
+        defer { isTranscribing = false }
+        do {
+            let object = try await AIClient.object(
+                system: "You transcribe short voice notes about money (spending, income, debts) by a user in Uzbekistan. "
+                    + "The speech is Uzbek, often mixed with Russian words. Write it in Uzbek Latin script (Russian words in Cyrillic), "
+                    + "exactly as spoken, with digits for numbers. Return only the transcription; empty string if there is no speech.",
+                text: "Transcribe the audio.",
+                schema: { upper in
+                    ["type": upper ? "OBJECT" : "object",
+                     "properties": ["text": ["type": upper ? "STRING" : "string"]],
+                     "required": ["text"]]
+                },
+                toolName: "transcribe", toolDescription: "Расшифровка речи.", config: config, timeout: 40,
+                attachments: [.init(mimeType: "audio/mp4", data: data)]
+            )
+            return (object["text"] as? String)?.trimmed ?? ""
+        } catch {
+            let e = error as NSError
+            self.error = "STT \(data.count) B, \(e.code): \(error.localizedDescription)"
+            return ""
+        }
+    }
+
+    private func finishCloud() async -> String {
+        silenceTask?.cancel()
+        engine.stop()
+        engine.inputNode.removeTap(onBus: 0)
+        // m4a дописывается только при закрытии файла — иначе Gemini отвечает 400.
+        cloudFile?.close()
+        cloudFile = nil
+        // Отдельная задача: автостоп по тишине вызывает stop() из silenceTask, и отмена этой задачи рвала бы запрос.
+        let text = await Task { await self.transcribeCloud() }.value
+        transcript = text
+        cloudConfig = nil
+        if let cloudURL { try? FileManager.default.removeItem(at: cloudURL) }
+        // Запись считается законченной только сейчас — экран ждёт текст, а не пустую строку.
+        isRecording = false
+        level = 0
+        teardown()
+        return text
+    }
+
     /// Останавливает запись и ждёт финальный вариант текста (не дольше секунды).
     func stop() async -> String {
         guard isRecording else { return transcript.trimmed }
+        if cloudConfig != nil {
+            guard !isTranscribing else { return transcript.trimmed }
+            return await finishCloud()
+        }
         isRecording = false
         silenceTask?.cancel()
         engine.stop()
@@ -99,6 +221,8 @@ final class SpeechRecognizer {
 
     func cancel() {
         isRecording = false
+        cloudConfig = nil
+        cloudFile = nil
         silenceTask?.cancel()
         if engine.isRunning {
             engine.stop()
@@ -160,6 +284,24 @@ final class SpeechRecognizer {
             for i in 0..<count { sum += samples[i] * samples[i] }
             let rms = (sum / Float(count)).squareRoot()
             onLevel(min(1, rms * 12))
+        }
+    }
+
+    private nonisolated static func installFileTap(
+        on input: AVAudioInputNode,
+        file: AVAudioFile,
+        onLevel: @escaping @Sendable (Float) -> Void,
+        onFail: @escaping @Sendable (String) -> Void
+    ) {
+        let format = input.outputFormat(forBus: 0)
+        input.installTap(onBus: 0, bufferSize: 2048, format: format) { buffer, _ in
+            do { try file.write(from: buffer) } catch { onFail("запись: \(error.localizedDescription)") }
+            guard let samples = buffer.floatChannelData?[0] else { return }
+            let count = Int(buffer.frameLength)
+            guard count > 0 else { return }
+            var sum: Float = 0
+            for i in 0..<count { sum += samples[i] * samples[i] }
+            onLevel(min(1, (sum / Float(count)).squareRoot() * 12))
         }
     }
 

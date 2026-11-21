@@ -64,6 +64,13 @@ struct SMSSetupView: View {
                     Text("Проверить или добавить старую SMS")
                 }
 
+                if !Account.pendingSMS.isEmpty {
+                    Section {
+                        Text("SMS в очереди: \(Account.pendingSMS.count). Они добавятся при следующем открытии основного аккаунта.")
+                            .foregroundStyle(.orange)
+                    }
+                }
+
                 Section {
                     if store.smsLog.isEmpty {
                         Text("Действие ещё ни разу не вызывалось из «Команд».")
